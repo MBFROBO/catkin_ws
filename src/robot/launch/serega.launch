@@ -1,0 +1,19 @@
+<launch>
+    <node name="audio_file_player" pkg="audio_file_player" type="play_file_server.py" output="screen">
+        <!-- Parameters to change the player to use other commands, flags and the rate (Hz) at which
+        the feedback is published, this is equivalent to the default configuration -->
+        <param name="command" value="play"/>
+        <param name="flags" value=""/>
+        <param name="feedback_rate" value="10"/>
+    </node>
+
+    <node name="serial_node" pkg="rosserial_arduino" type="serial_node.py">
+        <param name="port" type="string" value="/dev/ttyUSB0"/>
+        <param name="baud" type="int" value="57600" />
+    </node>
+
+    <node name="robot_arduino_communication" pkg="robot_arduino_communication" type="robot_arduino_communication_node" />
+
+    <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" />
+
+</launch>
