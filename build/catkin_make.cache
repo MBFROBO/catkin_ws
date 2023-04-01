@@ -1,2 +1,2 @@
-audio_file_player:robbie_description:robot:robot_arduino_communication:robot_depth_points_play_sound:robot_start_move:ros_astra_camera:test_package
--DCATKIN_DEVEL_PREFIX=/home/robot/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/robot/catkin_ws/install -G Unix Makefiles
+audio_file_player:robbie_description:robot:robot_arduino_communication:robot_depth_points_play_sound:robot_eyes:robot_start_move:test_package
+-DCATKIN_DEVEL_PREFIX=/home/uasu/robot/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/uasu/robot/catkin_ws/install -G Unix Makefiles

@@ -1,4 +1,4 @@
-prefix=/home/robot/catkin_ws/devel
+prefix=/home/uasu/robot/catkin_ws/devel
 
 Name: robot_start_move
 Description: Description of robot_start_move

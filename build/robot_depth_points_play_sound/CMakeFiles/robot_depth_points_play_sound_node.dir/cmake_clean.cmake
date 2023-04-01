@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node"
-  "/home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node.pdb"
+  "/home/uasu/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node"
+  "/home/uasu/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node.pdb"
   "CMakeFiles/robot_depth_points_play_sound_node.dir/src/depth_to_sound.cpp.o"
 )
 

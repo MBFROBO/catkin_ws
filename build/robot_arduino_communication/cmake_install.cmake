@@ -1,8 +1,8 @@
-# Install script for directory: /home/robot/catkin_ws/src/robot_arduino_communication
+# Install script for directory: /home/uasu/robot/catkin_ws/src/robot_arduino_communication
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robot/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/uasu/robot/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robot/catkin_ws/build/robot_arduino_communication/catkin_generated/installspace/robot_arduino_communication.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uasu/robot/catkin_ws/build/robot_arduino_communication/catkin_generated/installspace/robot_arduino_communication.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_arduino_communication/cmake" TYPE FILE FILES
-    "/home/robot/catkin_ws/build/robot_arduino_communication/catkin_generated/installspace/robot_arduino_communicationConfig.cmake"
-    "/home/robot/catkin_ws/build/robot_arduino_communication/catkin_generated/installspace/robot_arduino_communicationConfig-version.cmake"
+    "/home/uasu/robot/catkin_ws/build/robot_arduino_communication/catkin_generated/installspace/robot_arduino_communicationConfig.cmake"
+    "/home/uasu/robot/catkin_ws/build/robot_arduino_communication/catkin_generated/installspace/robot_arduino_communicationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_arduino_communication" TYPE FILE FILES "/home/robot/catkin_ws/src/robot_arduino_communication/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_arduino_communication" TYPE FILE FILES "/home/uasu/robot/catkin_ws/src/robot_arduino_communication/package.xml")
 endif()
 

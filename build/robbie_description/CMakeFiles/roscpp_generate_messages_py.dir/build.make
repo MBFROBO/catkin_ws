@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/uasu/robot/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/catkin_ws/build
+CMAKE_BINARY_DIR = /home/uasu/robot/catkin_ws/build
 
 # Utility rule file for roscpp_generate_messages_py.
 
@@ -63,10 +63,10 @@ robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/build: roscpp_gene
 .PHONY : robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/build
 
 robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	cd /home/robot/catkin_ws/build/robbie_description && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/uasu/robot/catkin_ws/build/robbie_description && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/depend:
-	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/catkin_ws/src /home/robot/catkin_ws/src/robbie_description /home/robot/catkin_ws/build /home/robot/catkin_ws/build/robbie_description /home/robot/catkin_ws/build/robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uasu/robot/catkin_ws/src /home/uasu/robot/catkin_ws/src/robbie_description /home/uasu/robot/catkin_ws/build /home/uasu/robot/catkin_ws/build/robbie_description /home/uasu/robot/catkin_ws/build/robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/depend
 

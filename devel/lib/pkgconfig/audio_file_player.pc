@@ -1,8 +1,8 @@
-prefix=/home/robot/catkin_ws/devel
+prefix=/home/uasu/robot/catkin_ws/devel
 
 Name: audio_file_player
 Description: Description of audio_file_player
 Version: 0.0.2
-Cflags: -I/home/robot/catkin_ws/devel/include
+Cflags: -I/home/uasu/robot/catkin_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: actionlib_msgs

@@ -1,8 +1,8 @@
-# Install script for directory: /home/robot/catkin_ws/src/robot_start_move
+# Install script for directory: /home/uasu/robot/catkin_ws/src/robot_start_move
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robot/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/uasu/robot/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robot/catkin_ws/build/robot_start_move/catkin_generated/installspace/robot_start_move.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uasu/robot/catkin_ws/build/robot_start_move/catkin_generated/installspace/robot_start_move.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_start_move/cmake" TYPE FILE FILES
-    "/home/robot/catkin_ws/build/robot_start_move/catkin_generated/installspace/robot_start_moveConfig.cmake"
-    "/home/robot/catkin_ws/build/robot_start_move/catkin_generated/installspace/robot_start_moveConfig-version.cmake"
+    "/home/uasu/robot/catkin_ws/build/robot_start_move/catkin_generated/installspace/robot_start_moveConfig.cmake"
+    "/home/uasu/robot/catkin_ws/build/robot_start_move/catkin_generated/installspace/robot_start_moveConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_start_move" TYPE FILE FILES "/home/robot/catkin_ws/src/robot_start_move/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_start_move" TYPE FILE FILES "/home/uasu/robot/catkin_ws/src/robot_start_move/package.xml")
 endif()
 

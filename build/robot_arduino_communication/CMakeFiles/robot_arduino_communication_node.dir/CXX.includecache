@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/robot/catkin_ws/src/robot_arduino_communication/include/servo_angle_restrictions.h
+/home/uasu/robot/catkin_ws/src/robot_arduino_communication/include/servo_angle_restrictions.h
 
-/home/robot/catkin_ws/src/robot_arduino_communication/src/communication.cpp
+/home/uasu/robot/catkin_ws/src/robot_arduino_communication/src/communication.cpp
 servo_angle_restrictions.h
-/home/robot/catkin_ws/src/robot_arduino_communication/src/servo_angle_restrictions.h
+/home/uasu/robot/catkin_ws/src/robot_arduino_communication/src/servo_angle_restrictions.h
 ros/ros.h
-/home/robot/catkin_ws/src/robot_arduino_communication/src/ros/ros.h
+/home/uasu/robot/catkin_ws/src/robot_arduino_communication/src/ros/ros.h
 std_msgs/UInt8MultiArray.h
-/home/robot/catkin_ws/src/robot_arduino_communication/src/std_msgs/UInt8MultiArray.h
+/home/uasu/robot/catkin_ws/src/robot_arduino_communication/src/std_msgs/UInt8MultiArray.h
 std_msgs/Int8.h
-/home/robot/catkin_ws/src/robot_arduino_communication/src/std_msgs/Int8.h
+/home/uasu/robot/catkin_ws/src/robot_arduino_communication/src/std_msgs/Int8.h
 std_msgs/String.h
-/home/robot/catkin_ws/src/robot_arduino_communication/src/std_msgs/String.h
+/home/uasu/robot/catkin_ws/src/robot_arduino_communication/src/std_msgs/String.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h
@@ -673,7 +673,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -689,7 +689,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -705,7 +705,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -723,7 +723,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -739,7 +739,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -

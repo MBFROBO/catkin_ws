@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import rospy
@@ -9,7 +9,7 @@ from sensor_msgs.msg import Image
 from std_msgs.msg import String
 from cv_bridge import CvBridge, CvBridgeError
 # import servo_angle_restrictions as servo_rest
-from std_msgs.msg import UInt8MultiArray
+from std_msgs.msg import UInt8MultiArray, Int8
 
 bridge = CvBridge()
 
@@ -75,7 +75,7 @@ rospy.init_node('image_converter', anonymous=True)
 image_sub = rospy.Subscriber("/camera/depth/image", Image, callback)
 # pub = rospy.Publisher('/audio_file_player/play', String, queue_size=10)
 right_shoulder = rospy.Publisher('/right_shoulder', UInt8MultiArray, queue_size=10)
-
+eye_publisher = rospy.Publisher('/eyes', Int8, queue_size=10)
 # rospy.spin()
 
 time_t = rospy.get_time()
@@ -125,3 +125,7 @@ except KeyboardInterrupt:
 
 cv.destroyAllWindows()
 
+
+class Handshake:
+    def __init__(self):
+        pass
