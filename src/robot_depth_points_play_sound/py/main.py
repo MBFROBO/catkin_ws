@@ -26,7 +26,7 @@ def callback(data):
     try:
         cv_image = bridge.imgmsg_to_cv2(data, "32FC1")
     except CvBridgeError as e:
-        print(e)
+        print('CV_BRIDGE_ERROR: ',e)
 
     img2 = np.float32(cv_image) 
     img2 = img2 * 0.5   
