@@ -23,5 +23,7 @@
         "unordered_map": "cpp",
         "unordered_set": "cpp",
         "system_error": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/src/robbie_description",
+    "DockerRun.DisableDockerrc": true
 }

@@ -1,4 +1,4 @@
-prefix=/home/robot/catkin_ws/install
+prefix=/home/uasu/robot/catkin_ws/install
 
 Name: robot_arduino_communication
 Description: Description of robot_arduino_communication

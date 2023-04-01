@@ -1,4 +1,4 @@
-prefix=/home/robot/catkin_ws/install
+prefix=/home/uasu/robot/catkin_ws/install
 
 Name: audio_file_player
 Description: Description of audio_file_player

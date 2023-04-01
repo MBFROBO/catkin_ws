@@ -1,0 +1,8 @@
+prefix=/home/uasu/robot/catkin_ws/install
+
+Name: robot_eyes
+Description: Description of robot_eyes
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

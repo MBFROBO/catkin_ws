@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/uasu/robot/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/catkin_ws/build
+CMAKE_BINARY_DIR = /home/uasu/robot/catkin_ws/build
 
 # Utility rule file for actionlib_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build: 
 .PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 
 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/robot/catkin_ws/build/audio_file_player && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/uasu/robot/catkin_ws/build/audio_file_player && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/clean
 
 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/catkin_ws/src /home/robot/catkin_ws/src/audio_file_player /home/robot/catkin_ws/build /home/robot/catkin_ws/build/audio_file_player /home/robot/catkin_ws/build/audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uasu/robot/catkin_ws/src /home/uasu/robot/catkin_ws/src/audio_file_player /home/uasu/robot/catkin_ws/build /home/uasu/robot/catkin_ws/build/audio_file_player /home/uasu/robot/catkin_ws/build/audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend
 

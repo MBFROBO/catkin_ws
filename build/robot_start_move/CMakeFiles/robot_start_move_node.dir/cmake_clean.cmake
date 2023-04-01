@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/catkin_ws/devel/lib/robot_start_move/robot_start_move_node"
-  "/home/robot/catkin_ws/devel/lib/robot_start_move/robot_start_move_node.pdb"
+  "/home/uasu/robot/catkin_ws/devel/lib/robot_start_move/robot_start_move_node"
+  "/home/uasu/robot/catkin_ws/devel/lib/robot_start_move/robot_start_move_node.pdb"
   "CMakeFiles/robot_start_move_node.dir/src/robot_move.cpp.o"
 )
 

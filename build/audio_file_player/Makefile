@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/uasu/robot/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/catkin_ws/build
+CMAKE_BINARY_DIR = /home/uasu/robot/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,17 +79,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -100,6 +89,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/robot/catkin_ws/build/CMakeFiles /home/robot/catkin_ws/build/audio_file_player/CMakeFiles/progress.marks
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/catkin_ws/build/CMakeFiles 0
+	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/uasu/robot/catkin_ws/build/CMakeFiles /home/uasu/robot/catkin_ws/build/audio_file_player/CMakeFiles/progress.marks
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uasu/robot/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/clean
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,187 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/preinstall
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/preinstall
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/rule
-.PHONY : audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/rule
-
-# Convenience name for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayAction: audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/rule
-
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayAction
-
-# fast build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayAction/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/build
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayAction/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-.PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_cpp: audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-.PHONY : actionlib_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/rule
-.PHONY : audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/rule
-
-# Convenience name for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback: audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/rule
-
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback
-
-# fast build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/build
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-.PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_py: audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_py
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_py/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-.PHONY : actionlib_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/rule
-.PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-audio_file_player_generate_messages_eus: audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/rule
-
-.PHONY : audio_file_player_generate_messages_eus
-
-# fast build rule for target.
-audio_file_player_generate_messages_eus/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/build
-.PHONY : audio_file_player_generate_messages_eus/fast
-
-# Convenience name for target.
-audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-.PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_lisp: audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-.PHONY : actionlib_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -344,42 +179,162 @@ audio_file_player_generate_messages: audio_file_player/CMakeFiles/audio_file_pla
 
 # fast build rule for target.
 audio_file_player_generate_messages/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/build
 .PHONY : audio_file_player_generate_messages/fast
 
 # Convenience name for target.
-audio_file_player/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : audio_file_player/CMakeFiles/_catkin_empty_exported_target.dir/rule
+audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: audio_file_player/CMakeFiles/_catkin_empty_exported_target.dir/rule
+std_msgs_generate_messages_py: audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
-.PHONY : _catkin_empty_exported_target
+.PHONY : std_msgs_generate_messages_py
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_catkin_empty_exported_target.dir/build.make audio_file_player/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+std_msgs_generate_messages_py/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-.PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/rule
+.PHONY : audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/rule
 
 # Convenience name for target.
-actionlib_msgs_generate_messages_eus: audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+_audio_file_player_generate_messages_check_deps_AudioFilePlayAction: audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/rule
 
-.PHONY : actionlib_msgs_generate_messages_eus
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayAction
 
 # fast build rule for target.
-actionlib_msgs_generate_messages_eus/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
-.PHONY : actionlib_msgs_generate_messages_eus/fast
+_audio_file_player_generate_messages_check_deps_AudioFilePlayAction/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/build
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayAction/fast
+
+# Convenience name for target.
+audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_cpp: audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/rule
+.PHONY : audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/rule
+
+# Convenience name for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback: audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/rule
+
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback
+
+# fast build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/build
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback/fast
+
+# Convenience name for target.
+audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_py: audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_py
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_py/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/rule
+.PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+audio_file_player_generate_messages_eus: audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/rule
+
+.PHONY : audio_file_player_generate_messages_eus
+
+# fast build rule for target.
+audio_file_player_generate_messages_eus/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/build
+.PHONY : audio_file_player_generate_messages_eus/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal.dir/rule
 .PHONY : audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal.dir/rule
 
 # Convenience name for target.
@@ -389,12 +344,42 @@ _audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal: audio_f
 
 # fast build rule for target.
 _audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal.dir/build
 .PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal/fast
 
 # Convenience name for target.
+audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_lisp: audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+.PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_eus: audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_eus
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_eus/fast:
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -404,12 +389,12 @@ audio_file_player_generate_messages_cpp: audio_file_player/CMakeFiles/audio_file
 
 # fast build rule for target.
 audio_file_player_generate_messages_cpp/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/build
 .PHONY : audio_file_player_generate_messages_cpp/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/rule
 .PHONY : audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/rule
 
 # Convenience name for target.
@@ -419,12 +404,12 @@ _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult: audio
 
 # fast build rule for target.
 _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/build
 .PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/rule
 .PHONY : audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/rule
 
 # Convenience name for target.
@@ -434,12 +419,12 @@ _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal: audio_file_pl
 
 # fast build rule for target.
 _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/build
 .PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_geneus.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_geneus.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_geneus.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_geneus.dir/rule
 
 # Convenience name for target.
@@ -449,12 +434,12 @@ audio_file_player_geneus: audio_file_player/CMakeFiles/audio_file_player_geneus.
 
 # fast build rule for target.
 audio_file_player_geneus/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_geneus.dir/build.make audio_file_player/CMakeFiles/audio_file_player_geneus.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_geneus.dir/build.make audio_file_player/CMakeFiles/audio_file_player_geneus.dir/build
 .PHONY : audio_file_player_geneus/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/rule
 .PHONY : audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/rule
 
 # Convenience name for target.
@@ -464,12 +449,12 @@ _audio_file_player_generate_messages_check_deps_AudioFilePlayResult: audio_file_
 
 # fast build rule for target.
 _audio_file_player_generate_messages_check_deps_AudioFilePlayResult/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/build
 .PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayResult/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/rule
 .PHONY : audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/rule
 
 # Convenience name for target.
@@ -479,12 +464,12 @@ _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback: audio_fil
 
 # fast build rule for target.
 _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/build
 .PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -494,12 +479,12 @@ audio_file_player_generate_messages_nodejs: audio_file_player/CMakeFiles/audio_f
 
 # fast build rule for target.
 audio_file_player_generate_messages_nodejs/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build
 .PHONY : audio_file_player_generate_messages_nodejs/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_gencpp.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_gencpp.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_gencpp.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_gencpp.dir/rule
 
 # Convenience name for target.
@@ -509,12 +494,12 @@ audio_file_player_gencpp: audio_file_player/CMakeFiles/audio_file_player_gencpp.
 
 # fast build rule for target.
 audio_file_player_gencpp/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_gencpp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_gencpp.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_gencpp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_gencpp.dir/build
 .PHONY : audio_file_player_gencpp/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_generate_messages_lisp.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_lisp.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_lisp.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -524,12 +509,12 @@ audio_file_player_generate_messages_lisp: audio_file_player/CMakeFiles/audio_fil
 
 # fast build rule for target.
 audio_file_player_generate_messages_lisp/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_lisp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_lisp.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_lisp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_lisp.dir/build
 .PHONY : audio_file_player_generate_messages_lisp/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 .PHONY : audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -539,12 +524,12 @@ actionlib_msgs_generate_messages_nodejs: audio_file_player/CMakeFiles/actionlib_
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_nodejs/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_generate_messages_py.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_py.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_generate_messages_py.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -554,12 +539,12 @@ audio_file_player_generate_messages_py: audio_file_player/CMakeFiles/audio_file_
 
 # fast build rule for target.
 audio_file_player_generate_messages_py/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_py.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_py.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_py.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_py.dir/build
 .PHONY : audio_file_player_generate_messages_py/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_genpy.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_genpy.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_genpy.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_genpy.dir/rule
 
 # Convenience name for target.
@@ -569,12 +554,12 @@ audio_file_player_genpy: audio_file_player/CMakeFiles/audio_file_player_genpy.di
 
 # fast build rule for target.
 audio_file_player_genpy/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_genpy.dir/build.make audio_file_player/CMakeFiles/audio_file_player_genpy.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_genpy.dir/build.make audio_file_player/CMakeFiles/audio_file_player_genpy.dir/build
 .PHONY : audio_file_player_genpy/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_genlisp.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_genlisp.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_genlisp.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_genlisp.dir/rule
 
 # Convenience name for target.
@@ -584,12 +569,12 @@ audio_file_player_genlisp: audio_file_player/CMakeFiles/audio_file_player_genlis
 
 # fast build rule for target.
 audio_file_player_genlisp/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_genlisp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_genlisp.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_genlisp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_genlisp.dir/build
 .PHONY : audio_file_player_genlisp/fast
 
 # Convenience name for target.
 audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/rule:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/rule
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/rule
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -599,7 +584,7 @@ audio_file_player_gennodejs: audio_file_player/CMakeFiles/audio_file_player_genn
 
 # fast build rule for target.
 audio_file_player_gennodejs/fast:
-	cd /home/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/build.make audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/build
+	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/build.make audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/build
 .PHONY : audio_file_player_gennodejs/fast
 
 # Help Target
@@ -610,7 +595,7 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... edit_cache"
-	@echo "... test"
+	@echo "... audio_file_player_generate_messages"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayAction"
 	@echo "... std_msgs_generate_messages_eus"
@@ -622,11 +607,10 @@ help:
 	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... audio_file_player_generate_messages_eus"
-	@echo "... actionlib_msgs_generate_messages_lisp"
-	@echo "... audio_file_player_generate_messages"
-	@echo "... _catkin_empty_exported_target"
-	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... test"
+	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... audio_file_player_generate_messages_cpp"
 	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult"
 	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal"
@@ -655,6 +639,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

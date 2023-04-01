@@ -1,8 +1,0 @@
-prefix=/home/robot/catkin_ws/install
-
-Name: audio_file_player
-Description: Description of audio_file_player
-Version: 0.0.2
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: actionlib_msgs

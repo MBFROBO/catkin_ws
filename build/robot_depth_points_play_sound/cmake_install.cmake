@@ -1,8 +1,8 @@
-# Install script for directory: /home/robot/catkin_ws/src/robot_depth_points_play_sound
+# Install script for directory: /home/uasu/robot/catkin_ws/src/robot_depth_points_play_sound
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robot/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/uasu/robot/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robot/catkin_ws/build/robot_depth_points_play_sound/catkin_generated/installspace/robot_depth_points_play_sound.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uasu/robot/catkin_ws/build/robot_depth_points_play_sound/catkin_generated/installspace/robot_depth_points_play_sound.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_depth_points_play_sound/cmake" TYPE FILE FILES
-    "/home/robot/catkin_ws/build/robot_depth_points_play_sound/catkin_generated/installspace/robot_depth_points_play_soundConfig.cmake"
-    "/home/robot/catkin_ws/build/robot_depth_points_play_sound/catkin_generated/installspace/robot_depth_points_play_soundConfig-version.cmake"
+    "/home/uasu/robot/catkin_ws/build/robot_depth_points_play_sound/catkin_generated/installspace/robot_depth_points_play_soundConfig.cmake"
+    "/home/uasu/robot/catkin_ws/build/robot_depth_points_play_sound/catkin_generated/installspace/robot_depth_points_play_soundConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_depth_points_play_sound" TYPE FILE FILES "/home/robot/catkin_ws/src/robot_depth_points_play_sound/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_depth_points_play_sound" TYPE FILE FILES "/home/uasu/robot/catkin_ws/src/robot_depth_points_play_sound/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_depth_points_play_sound" TYPE PROGRAM FILES "/home/robot/catkin_ws/build/robot_depth_points_play_sound/catkin_generated/installspace/main.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_depth_points_play_sound" TYPE PROGRAM FILES "/home/uasu/robot/catkin_ws/build/robot_depth_points_play_sound/catkin_generated/installspace/main.py")
 endif()
 
