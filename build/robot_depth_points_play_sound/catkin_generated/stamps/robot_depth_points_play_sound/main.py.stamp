@@ -9,7 +9,7 @@ from sensor_msgs.msg import Image
 from std_msgs.msg import String
 from cv_bridge import CvBridge, CvBridgeError
 # import servo_angle_restrictions as servo_rest
-from std_msgs.msg import UInt8MultiArray
+from std_msgs.msg import UInt8MultiArray, Int8
 
 bridge = CvBridge()
 
@@ -26,7 +26,7 @@ def callback(data):
     try:
         cv_image = bridge.imgmsg_to_cv2(data, "32FC1")
     except CvBridgeError as e:
-        print(e)
+        print('CV_BRIDGE_ERROR: ',e)
 
     img2 = np.float32(cv_image) 
     img2 = img2 * 0.5   
@@ -75,7 +75,7 @@ rospy.init_node('image_converter', anonymous=True)
 image_sub = rospy.Subscriber("/camera/depth/image", Image, callback)
 # pub = rospy.Publisher('/audio_file_player/play', String, queue_size=10)
 right_shoulder = rospy.Publisher('/right_shoulder', UInt8MultiArray, queue_size=10)
-
+eye_publisher = rospy.Publisher('/eyes', Int8, queue_size=10)
 # rospy.spin()
 
 time_t = rospy.get_time()
@@ -100,6 +100,9 @@ while (rospy.get_time() - time_t) < 2:
 rospy.loginfo(data_right_shoulder)
 right_shoulder.publish(data_right_shoulder)
 
+data_eyes = Int8()
+data_eyes.data = people
+eye_publisher.publish(data_eyes)
 # rospy.spin();
     
 
@@ -125,3 +128,7 @@ except KeyboardInterrupt:
 
 cv.destroyAllWindows()
 
+
+class Handshake:
+    def __init__(self):
+        pass

@@ -1,4 +1,4 @@
-prefix=/home/uasu/robot/catkin_ws/install
+prefix=/home/robot/catkin_ws/install
 
 Name: robot_depth_points_play_sound
 Description: Description of robot_depth_points_play_sound

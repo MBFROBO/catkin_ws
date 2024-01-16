@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <memory>
+#include <map>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -40,7 +40,7 @@ struct AudioFilePlayResult_
    typedef uint8_t _success_type;
   _success_type success;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _reason_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _reason_type;
   _reason_type reason;
 
    typedef ros::Time _total_time_type;
@@ -208,7 +208,7 @@ struct Printer< ::audio_file_player::AudioFilePlayResult_<ContainerAllocator> >
     s << indent << "success: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.success);
     s << indent << "reason: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.reason);
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.reason);
     s << indent << "total_time: ";
     Printer<ros::Time>::stream(s, indent + "  ", v.total_time);
   }

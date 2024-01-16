@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <memory>
+#include <map>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -33,7 +33,7 @@ struct AudioFilePlayGoal_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _filepath_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _filepath_type;
   _filepath_type filepath;
 
 
@@ -187,7 +187,7 @@ struct Printer< ::audio_file_player::AudioFilePlayGoal_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::audio_file_player::AudioFilePlayGoal_<ContainerAllocator>& v)
   {
     s << indent << "filepath: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.filepath);
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.filepath);
   }
 };
 

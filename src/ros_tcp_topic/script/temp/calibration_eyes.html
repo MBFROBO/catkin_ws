@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('ui', path = '/index.css')}}">
+</head>
+
+<body>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/eyes_calibrate" onclick="openSliders()">Калибровка зрения</a>
+        <a href="#">Автоматическая калибровка зрения (beta)</a>
+        <a href="/astra_calibrate">Калибровка Astra</a>
+        <a href="/">Галвное Меню</a>
+        <a href="/promo">Промо</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+    <div class="slidecontainer">
+        <!-- <input type="range" name="H" step="1" min="0" max="180" value="0" id="slider_0" class="slider" />
+        <p>H</p>
+        <input type="range" name="S" step="1" min="0" max="255" value="0" id="slider_1" class="slider" />
+        <p>S</p>
+        <input type="range" name="V" step="1" min="0" max="255" value="0" id="slider_2" class="slider" />
+        <p>V</p>
+        <input type="range" name="HL" step="1" min="0" max="180" value="0" id="slider_3" class="slider" />
+        <p>HL</p>
+        <input type="range" name="SL" step="1" min="0" max="180" value="0" id="slider_4" class="slider" />
+        <p>SL</p>
+        <input type="range" name="VL" step="1" min="0" max="180" value="0" id="slider_5" class="slider" />
+        <p>VL</p>
+        <input type="button" name="buttonRange" value="Отправить" onclick="onClickButtonRange()" /> -->
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "300px";
+        }
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        function openSliders() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        for (let i = 0; i < 6; i++) {
+            document.getElementById("slider_" + i).style.width = "250px";
+            document.getElementById("slider_" + i).style.height = "25px";
+            document.getElementById("slider_" + i).style.top = "25px";
+        }
+
+
+    </script>
+    <img id="HAND_STREAM_TRACK" src="http://10.42.0.1:8080/stream?topic=/HAND_STREAM_TRACK" />
+    <img id="STREAM_RIGHT_EYE" src="http://10.42.0.1:8080/stream?topic=/RIGHT_EYE_FRAME" />
+    <!-- <img id="STREAM_RIGHT_COUNT" src="http://10.42.0.1:8080/stream?topic=/RIGHT_EYE_COUNT" /> -->
+    <script>
+
+        var ws = new WebSocket("ws://" + window.location.host + '/eyes_calibrate');
+
+        var input0 = document.querySelector("#slider_0");
+        var input1 = document.querySelector("#slider_1");
+        var input2 = document.querySelector("#slider_2");
+        var input3 = document.querySelector("#slider_3");
+        var input4 = document.querySelector("#slider_4");
+        var input5 = document.querySelector("#slider_5");
+
+        ws.onopen = function () {
+            ws.send(JSON.stringify({
+                'connection': 'open'
+            }));
+        }
+
+        ws.onmessage = function (event) {
+            console.log(event.data);
+
+            setInterval(() => {
+                ws.send(JSON.stringify({
+                    'message':'ok'
+                }))
+            }, 1000)
+        }
+
+        // function onClickButtonRange() {
+
+        //     ws.send(JSON.stringify({
+        //         'slider0': input0.value,
+        //         'slider1': input1.value,
+        //         'slider2': input2.value,
+        //         'slider3': input3.value,
+        //         'slider4': input4.value,
+        //         'slider5': input5.value,
+        //     }));
+        // }
+        
+        ws.onclose = function () { }
+
+    </script>
+</body>
+
+</html>

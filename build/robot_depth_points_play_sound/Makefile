@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uasu/robot/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/robot/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uasu/robot/catkin_ws/build
+CMAKE_BINARY_DIR = /home/robot/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,16 +67,6 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -102,16 +92,15 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : test/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -135,16 +124,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/uasu/robot/catkin_ws/build/CMakeFiles /home/uasu/robot/catkin_ws/build/robot_depth_points_play_sound/CMakeFiles/progress.marks
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uasu/robot/catkin_ws/build/CMakeFiles 0
+	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/robot/catkin_ws/build/CMakeFiles /home/robot/catkin_ws/build/robot_depth_points_play_sound/CMakeFiles/progress.marks
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/clean
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,172 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/preinstall
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/preinstall
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
 robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/rule
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/rule
 .PHONY : robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/rule
 
 # Convenience name for target.
@@ -329,7 +179,7 @@ robot_depth_points_play_sound_node: robot_depth_points_play_sound/CMakeFiles/rob
 
 # fast build rule for target.
 robot_depth_points_play_sound_node/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build.make robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build
+	cd /home/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build.make robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build
 .PHONY : robot_depth_points_play_sound_node/fast
 
 src/depth_to_sound.o: src/depth_to_sound.cpp.o
@@ -338,7 +188,7 @@ src/depth_to_sound.o: src/depth_to_sound.cpp.o
 
 # target to build an object file
 src/depth_to_sound.cpp.o:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build.make robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/src/depth_to_sound.cpp.o
+	cd /home/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build.make robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/src/depth_to_sound.cpp.o
 .PHONY : src/depth_to_sound.cpp.o
 
 src/depth_to_sound.i: src/depth_to_sound.cpp.i
@@ -347,7 +197,7 @@ src/depth_to_sound.i: src/depth_to_sound.cpp.i
 
 # target to preprocess a source file
 src/depth_to_sound.cpp.i:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build.make robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/src/depth_to_sound.cpp.i
+	cd /home/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build.make robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/src/depth_to_sound.cpp.i
 .PHONY : src/depth_to_sound.cpp.i
 
 src/depth_to_sound.s: src/depth_to_sound.cpp.s
@@ -356,7 +206,7 @@ src/depth_to_sound.s: src/depth_to_sound.cpp.s
 
 # target to generate assembly for a file
 src/depth_to_sound.cpp.s:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build.make robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/src/depth_to_sound.cpp.s
+	cd /home/robot/catkin_ws/build && $(MAKE) -f robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build.make robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/src/depth_to_sound.cpp.s
 .PHONY : src/depth_to_sound.cpp.s
 
 # Help Target
@@ -366,23 +216,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... install/local"
-	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... install"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... robot_depth_points_play_sound_node"
-	@echo "... test"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... robot_depth_points_play_sound_node"
 	@echo "... src/depth_to_sound.o"
 	@echo "... src/depth_to_sound.i"
 	@echo "... src/depth_to_sound.s"
@@ -397,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

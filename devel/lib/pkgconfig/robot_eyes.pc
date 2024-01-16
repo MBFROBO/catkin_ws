@@ -1,4 +1,4 @@
-prefix=/home/uasu/robot/catkin_ws/devel
+prefix=/home/robot/catkin_ws/devel
 
 Name: robot_eyes
 Description: Description of robot_eyes

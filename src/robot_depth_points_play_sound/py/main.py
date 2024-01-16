@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import sys
 import rospy
 import cv2 as cv
@@ -14,7 +13,6 @@ from std_msgs.msg import UInt8MultiArray, Int8
 bridge = CvBridge()
 
 people = 0
-
 start_play = 0
 
 def callback(data):
@@ -42,26 +40,26 @@ def callback(data):
     drawing = np.zeros((cv_image_convert_uint8_t.shape[0], cv_image_convert_uint8_t.shape[1], 3), dtype=np.uint8)
     for i in range(len(contours)):
         color = (0, 255, 255)
-        if cv.contourArea(contours[i]) > 50000:
+        if cv.contourArea(contours[i]) > 40000:
             people = 1
             time_t = rospy.get_time()
             cv.drawContours(drawing, contours, i, color, 2, cv.LINE_8, hierarchy, 0)
 
-    # if people == 1:
-    #     if start_play == 0:
-    #         start_play = 1
-    #         str_play = "~/_1.mp3"
-    #         pub.publish(str_play)
-    # else:
-    #     if start_play == 1:
-    #         start_play = 0
-    #         print("stop")
-    #         time_t = rospy.get_time()
-    #         str_stop = "~/__.mp3"
-    #         pub.publish(str_stop)  
+    if people == 1:
+        if start_play == 0:
+            start_play = 1
+            str_play = "~/_1.mp3"
+            pub.publish(str_play)
+    else:
+        if start_play == 1:
+            start_play = 0
+            print("stop")
+            time_t = rospy.get_time()
+            str_stop = "~/__.mp3"
+            pub.publish(str_stop)  
 
     # if people == 1:
-    #     if rospy.get_time() - time_t > 2:
+    #     if (rospy.get_time() - time_t) > 2:
     #         people = 0
             
 
@@ -73,20 +71,20 @@ def callback(data):
 
 rospy.init_node('image_converter', anonymous=True)
 image_sub = rospy.Subscriber("/camera/depth/image", Image, callback)
-# pub = rospy.Publisher('/audio_file_player/play', String, queue_size=10)
-right_shoulder = rospy.Publisher('/right_shoulder', UInt8MultiArray, queue_size=10)
+pub = rospy.Publisher('/audio_file_player/play', String, queue_size=10)
+# right_shoulder = rospy.Publisher('/right_shoulder', UInt8MultiArray, queue_size=10)
 eye_publisher = rospy.Publisher('/eyes', Int8, queue_size=10)
 # rospy.spin()
 
 time_t = rospy.get_time()
 
-data_right_shoulder = UInt8MultiArray()
-data_right_shoulder.data = [0]*4
+# data_right_shoulder = UInt8MultiArray()
+# data_right_shoulder.data = [0]*4
 
-data_right_shoulder.data[0] = 45
-data_right_shoulder.data[1] = 160
-data_right_shoulder.data[2] = 80
-data_right_shoulder.data[3] = 80
+# data_right_shoulder.data[0] = 45
+# data_right_shoulder.data[1] = 160
+# data_right_shoulder.data[2] = 80
+# data_right_shoulder.data[3] = 80
 
 time_t = rospy.get_time()
 while (rospy.get_time() - time_t) < 2:
@@ -97,9 +95,12 @@ while (rospy.get_time() - time_t) < 2:
 # str_play = "~/vis.mp3"
 # pub.publish(str_play)
 
-rospy.loginfo(data_right_shoulder)
-right_shoulder.publish(data_right_shoulder)
+# rospy.loginfo(data_right_shoulder)
+# right_shoulder.publish(data_right_shoulder)
 
+data_eyes = Int8()
+data_eyes.data = people
+eye_publisher.publish(data_eyes)
 # rospy.spin();
     
 
@@ -124,8 +125,3 @@ except KeyboardInterrupt:
     print("Shutting down")
 
 cv.destroyAllWindows()
-
-
-class Handshake:
-    def __init__(self):
-        pass

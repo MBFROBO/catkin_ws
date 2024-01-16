@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uasu/robot/catkin_ws/devel/lib/test_package/test_package_node"
-  "/home/uasu/robot/catkin_ws/devel/lib/test_package/test_package_node.pdb"
+  "/home/robot/catkin_ws/devel/lib/test_package/test_package_node"
+  "/home/robot/catkin_ws/devel/lib/test_package/test_package_node.pdb"
   "CMakeFiles/test_package_node.dir/src/test_package_node.cpp.o"
 )
 

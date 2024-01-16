@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uasu/robot/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/robot/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uasu/robot/catkin_ws/build
+CMAKE_BINARY_DIR = /home/robot/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/uasu/robot/catkin_ws/build/CMakeFiles /home/uasu/robot/catkin_ws/build/robot_start_move/CMakeFiles/progress.marks
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uasu/robot/catkin_ws/build/CMakeFiles 0
+	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/robot/catkin_ws/build/CMakeFiles /home/robot/catkin_ws/build/robot_start_move/CMakeFiles/progress.marks
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/clean
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/preinstall
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/preinstall
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 robot_start_move/CMakeFiles/robot_start_move_node.dir/rule:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/CMakeFiles/robot_start_move_node.dir/rule
+	cd /home/robot/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_start_move/CMakeFiles/robot_start_move_node.dir/rule
 .PHONY : robot_start_move/CMakeFiles/robot_start_move_node.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ robot_start_move_node: robot_start_move/CMakeFiles/robot_start_move_node.dir/rul
 
 # fast build rule for target.
 robot_start_move_node/fast:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_start_move/CMakeFiles/robot_start_move_node.dir/build.make robot_start_move/CMakeFiles/robot_start_move_node.dir/build
+	cd /home/robot/catkin_ws/build && $(MAKE) -f robot_start_move/CMakeFiles/robot_start_move_node.dir/build.make robot_start_move/CMakeFiles/robot_start_move_node.dir/build
 .PHONY : robot_start_move_node/fast
 
 src/robot_move.o: src/robot_move.cpp.o
@@ -188,7 +188,7 @@ src/robot_move.o: src/robot_move.cpp.o
 
 # target to build an object file
 src/robot_move.cpp.o:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_start_move/CMakeFiles/robot_start_move_node.dir/build.make robot_start_move/CMakeFiles/robot_start_move_node.dir/src/robot_move.cpp.o
+	cd /home/robot/catkin_ws/build && $(MAKE) -f robot_start_move/CMakeFiles/robot_start_move_node.dir/build.make robot_start_move/CMakeFiles/robot_start_move_node.dir/src/robot_move.cpp.o
 .PHONY : src/robot_move.cpp.o
 
 src/robot_move.i: src/robot_move.cpp.i
@@ -197,7 +197,7 @@ src/robot_move.i: src/robot_move.cpp.i
 
 # target to preprocess a source file
 src/robot_move.cpp.i:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_start_move/CMakeFiles/robot_start_move_node.dir/build.make robot_start_move/CMakeFiles/robot_start_move_node.dir/src/robot_move.cpp.i
+	cd /home/robot/catkin_ws/build && $(MAKE) -f robot_start_move/CMakeFiles/robot_start_move_node.dir/build.make robot_start_move/CMakeFiles/robot_start_move_node.dir/src/robot_move.cpp.i
 .PHONY : src/robot_move.cpp.i
 
 src/robot_move.s: src/robot_move.cpp.s
@@ -206,7 +206,7 @@ src/robot_move.s: src/robot_move.cpp.s
 
 # target to generate assembly for a file
 src/robot_move.cpp.s:
-	cd /home/uasu/robot/catkin_ws/build && $(MAKE) -f robot_start_move/CMakeFiles/robot_start_move_node.dir/build.make robot_start_move/CMakeFiles/robot_start_move_node.dir/src/robot_move.cpp.s
+	cd /home/robot/catkin_ws/build && $(MAKE) -f robot_start_move/CMakeFiles/robot_start_move_node.dir/build.make robot_start_move/CMakeFiles/robot_start_move_node.dir/src/robot_move.cpp.s
 .PHONY : src/robot_move.cpp.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

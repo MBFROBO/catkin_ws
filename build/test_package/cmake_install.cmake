@@ -1,8 +1,8 @@
-# Install script for directory: /home/uasu/robot/catkin_ws/src/test_package
+# Install script for directory: /home/robot/catkin_ws/src/test_package
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uasu/robot/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robot/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uasu/robot/catkin_ws/build/test_package/catkin_generated/installspace/test_package.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robot/catkin_ws/build/test_package/catkin_generated/installspace/test_package.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package/cmake" TYPE FILE FILES
-    "/home/uasu/robot/catkin_ws/build/test_package/catkin_generated/installspace/test_packageConfig.cmake"
-    "/home/uasu/robot/catkin_ws/build/test_package/catkin_generated/installspace/test_packageConfig-version.cmake"
+    "/home/robot/catkin_ws/build/test_package/catkin_generated/installspace/test_packageConfig.cmake"
+    "/home/robot/catkin_ws/build/test_package/catkin_generated/installspace/test_packageConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package" TYPE FILE FILES "/home/uasu/robot/catkin_ws/src/test_package/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_package" TYPE FILE FILES "/home/robot/catkin_ws/src/test_package/package.xml")
 endif()
 

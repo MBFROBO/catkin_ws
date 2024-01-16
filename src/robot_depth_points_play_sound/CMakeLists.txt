@@ -169,7 +169,8 @@ target_link_libraries(${PROJECT_NAME}_node
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  py/main.py
+  py/human_tracking.py
+  py/human_detect.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

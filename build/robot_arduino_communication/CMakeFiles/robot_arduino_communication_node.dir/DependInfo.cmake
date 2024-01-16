@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/uasu/robot/catkin_ws/src/robot_arduino_communication/src/communication.cpp" "/home/uasu/robot/catkin_ws/build/robot_arduino_communication/CMakeFiles/robot_arduino_communication_node.dir/src/communication.cpp.o"
+  "/home/robot/catkin_ws/src/robot_arduino_communication/src/communication.cpp" "/home/robot/catkin_ws/build/robot_arduino_communication/CMakeFiles/robot_arduino_communication_node.dir/src/communication.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/uasu/robot/catkin_ws/src/robot_arduino_communication/include"
+  "/home/robot/catkin_ws/src/robot_arduino_communication/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

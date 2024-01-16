@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uasu/robot/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/robot/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uasu/robot/catkin_ws/build
+CMAKE_BINARY_DIR = /home/robot/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uasu/robot/catkin_ws/build/CMakeFiles /home/uasu/robot/catkin_ws/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/catkin_ws/build/CMakeFiles /home/robot/catkin_ws/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uasu/robot/catkin_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -294,60 +294,73 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/build.make robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f audio_common/audio_common/CMakeFiles/_catkin_empty_exported_target.dir/build.make audio_common/audio_common/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
-# Target rules for targets named audio_file_player_generate_messages
+# Target rules for targets named audio_common_msgs_genpy
 
 # Build rule for target.
-audio_file_player_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_generate_messages
-.PHONY : audio_file_player_generate_messages
+audio_common_msgs_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_genpy
+.PHONY : audio_common_msgs_genpy
 
 # fast build rule for target.
-audio_file_player_generate_messages/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/build
-.PHONY : audio_file_player_generate_messages/fast
+audio_common_msgs_genpy/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_genpy.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_genpy.dir/build
+.PHONY : audio_common_msgs_genpy/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
+# Target rules for targets named audio_common_msgs_generate_messages_nodejs
 
 # Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
+audio_common_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_generate_messages_nodejs
+.PHONY : audio_common_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+audio_common_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_nodejs.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_nodejs.dir/build
+.PHONY : audio_common_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayAction
+# Target rules for targets named audio_common_msgs_genlisp
 
 # Build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayAction: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayAction
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayAction
+audio_common_msgs_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_genlisp
+.PHONY : audio_common_msgs_genlisp
 
 # fast build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayAction/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/build
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayAction/fast
+audio_common_msgs_genlisp/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_genlisp.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_genlisp.dir/build
+.PHONY : audio_common_msgs_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
+# Target rules for targets named audio_common_msgs_generate_messages_py
 
 # Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
+audio_common_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_generate_messages_py
+.PHONY : audio_common_msgs_generate_messages_py
 
 # fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+audio_common_msgs_generate_messages_py/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_py.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_py.dir/build
+.PHONY : audio_common_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named audio_common_msgs_gennodejs
+
+# Build rule for target.
+audio_common_msgs_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_gennodejs
+.PHONY : audio_common_msgs_gennodejs
+
+# fast build rule for target.
+audio_common_msgs_gennodejs/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_gennodejs.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_gennodejs.dir/build
+.PHONY : audio_common_msgs_gennodejs/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
@@ -359,21 +372,34 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
+# Target rules for targets named std_msgs_generate_messages_eus
 
 # Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
 
 # fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named audio_common_msgs_generate_messages_lisp
+
+# Build rule for target.
+audio_common_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_generate_messages_lisp
+.PHONY : audio_common_msgs_generate_messages_lisp
+
+# fast build rule for target.
+audio_common_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_lisp.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_lisp.dir/build
+.PHONY : audio_common_msgs_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
@@ -385,8 +411,307 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make audio_file_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named audio_common_msgs_generate_messages_cpp
+
+# Build rule for target.
+audio_common_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_generate_messages_cpp
+.PHONY : audio_common_msgs_generate_messages_cpp
+
+# fast build rule for target.
+audio_common_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_cpp.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_cpp.dir/build
+.PHONY : audio_common_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make audio_common/audio_common_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _audio_common_msgs_generate_messages_check_deps_AudioData
+
+# Build rule for target.
+_audio_common_msgs_generate_messages_check_deps_AudioData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _audio_common_msgs_generate_messages_check_deps_AudioData
+.PHONY : _audio_common_msgs_generate_messages_check_deps_AudioData
+
+# fast build rule for target.
+_audio_common_msgs_generate_messages_check_deps_AudioData/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/_audio_common_msgs_generate_messages_check_deps_AudioData.dir/build.make audio_common/audio_common_msgs/CMakeFiles/_audio_common_msgs_generate_messages_check_deps_AudioData.dir/build
+.PHONY : _audio_common_msgs_generate_messages_check_deps_AudioData/fast
+
+#=============================================================================
+# Target rules for targets named audio_common_msgs_generate_messages
+
+# Build rule for target.
+audio_common_msgs_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_generate_messages
+.PHONY : audio_common_msgs_generate_messages
+
+# fast build rule for target.
+audio_common_msgs_generate_messages/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages.dir/build
+.PHONY : audio_common_msgs_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named audio_common_msgs_geneus
+
+# Build rule for target.
+audio_common_msgs_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_geneus
+.PHONY : audio_common_msgs_geneus
+
+# fast build rule for target.
+audio_common_msgs_geneus/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_geneus.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_geneus.dir/build
+.PHONY : audio_common_msgs_geneus/fast
+
+#=============================================================================
+# Target rules for targets named _audio_common_msgs_generate_messages_check_deps_AudioDataStamped
+
+# Build rule for target.
+_audio_common_msgs_generate_messages_check_deps_AudioDataStamped: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _audio_common_msgs_generate_messages_check_deps_AudioDataStamped
+.PHONY : _audio_common_msgs_generate_messages_check_deps_AudioDataStamped
+
+# fast build rule for target.
+_audio_common_msgs_generate_messages_check_deps_AudioDataStamped/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/_audio_common_msgs_generate_messages_check_deps_AudioDataStamped.dir/build.make audio_common/audio_common_msgs/CMakeFiles/_audio_common_msgs_generate_messages_check_deps_AudioDataStamped.dir/build
+.PHONY : _audio_common_msgs_generate_messages_check_deps_AudioDataStamped/fast
+
+#=============================================================================
+# Target rules for targets named _audio_common_msgs_generate_messages_check_deps_AudioInfo
+
+# Build rule for target.
+_audio_common_msgs_generate_messages_check_deps_AudioInfo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _audio_common_msgs_generate_messages_check_deps_AudioInfo
+.PHONY : _audio_common_msgs_generate_messages_check_deps_AudioInfo
+
+# fast build rule for target.
+_audio_common_msgs_generate_messages_check_deps_AudioInfo/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/_audio_common_msgs_generate_messages_check_deps_AudioInfo.dir/build.make audio_common/audio_common_msgs/CMakeFiles/_audio_common_msgs_generate_messages_check_deps_AudioInfo.dir/build
+.PHONY : _audio_common_msgs_generate_messages_check_deps_AudioInfo/fast
+
+#=============================================================================
+# Target rules for targets named audio_common_msgs_gencpp
+
+# Build rule for target.
+audio_common_msgs_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_gencpp
+.PHONY : audio_common_msgs_gencpp
+
+# fast build rule for target.
+audio_common_msgs_gencpp/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_gencpp.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_gencpp.dir/build
+.PHONY : audio_common_msgs_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named audio_common_msgs_generate_messages_eus
+
+# Build rule for target.
+audio_common_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_common_msgs_generate_messages_eus
+.PHONY : audio_common_msgs_generate_messages_eus
+
+# fast build rule for target.
+audio_common_msgs_generate_messages_eus/fast:
+	$(MAKE) -f audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_eus.dir/build.make audio_common/audio_common_msgs/CMakeFiles/audio_common_msgs_generate_messages_eus.dir/build
+.PHONY : audio_common_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_eus
+
+# Build rule for target.
+roscpp_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_eus.dir/build.make audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_nodejs
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_nodejs
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_py.dir/build.make audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_nodejs
+
+# Build rule for target.
+roscpp_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make audio_common/audio_capture/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_eus
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make audio_common/audio_capture/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named audio_capture
+
+# Build rule for target.
+audio_capture: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_capture
+.PHONY : audio_capture
+
+# fast build rule for target.
+audio_capture/fast:
+	$(MAKE) -f audio_common/audio_capture/CMakeFiles/audio_capture.dir/build.make audio_common/audio_capture/CMakeFiles/audio_capture.dir/build
+.PHONY : audio_capture/fast
+
+#=============================================================================
+# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback
+
+# Build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback
+
+# fast build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/build
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback/fast
+
+#=============================================================================
+# Target rules for targets named audio_file_player_generate_messages_nodejs
+
+# Build rule for target.
+audio_file_player_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_generate_messages_nodejs
+.PHONY : audio_file_player_generate_messages_nodejs
+
+# fast build rule for target.
+audio_file_player_generate_messages_nodejs/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build
+.PHONY : audio_file_player_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_cpp
@@ -402,17 +727,56 @@ actionlib_msgs_generate_messages_cpp/fast:
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback
+# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal
 
 # Build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback
+_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal
 
 # fast build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/build
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback/fast
+_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/build
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal/fast
+
+#=============================================================================
+# Target rules for targets named audio_file_player_geneus
+
+# Build rule for target.
+audio_file_player_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_geneus
+.PHONY : audio_file_player_geneus
+
+# fast build rule for target.
+audio_file_player_geneus/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_geneus.dir/build.make audio_file_player/CMakeFiles/audio_file_player_geneus.dir/build
+.PHONY : audio_file_player_geneus/fast
+
+#=============================================================================
+# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayAction
+
+# Build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayAction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayAction
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayAction
+
+# fast build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayAction/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayAction.dir/build
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayAction/fast
+
+#=============================================================================
+# Target rules for targets named audio_file_player_generate_messages
+
+# Build rule for target.
+audio_file_player_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_generate_messages
+.PHONY : audio_file_player_generate_messages
+
+# fast build rule for target.
+audio_file_player_generate_messages/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages.dir/build
+.PHONY : audio_file_player_generate_messages/fast
 
 #=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_py
@@ -428,6 +792,32 @@ actionlib_msgs_generate_messages_py/fast:
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult
+
+# Build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult
+
+# fast build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/build
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult/fast
+
+#=============================================================================
+# Target rules for targets named audio_file_player_generate_messages_cpp
+
+# Build rule for target.
+audio_file_player_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_generate_messages_cpp
+.PHONY : audio_file_player_generate_messages_cpp
+
+# fast build rule for target.
+audio_file_player_generate_messages_cpp/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/build
+.PHONY : audio_file_player_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named audio_file_player_generate_messages_eus
 
 # Build rule for target.
@@ -439,6 +829,19 @@ audio_file_player_generate_messages_eus: cmake_check_build_system
 audio_file_player_generate_messages_eus/fast:
 	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_eus.dir/build
 .PHONY : audio_file_player_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback
+
+# Build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback
+
+# fast build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback.dir/build
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback/fast
 
 #=============================================================================
 # Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal
@@ -478,97 +881,6 @@ actionlib_msgs_generate_messages_eus: cmake_check_build_system
 actionlib_msgs_generate_messages_eus/fast:
 	$(MAKE) -f audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make audio_file_player/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
 .PHONY : actionlib_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named audio_file_player_generate_messages_cpp
-
-# Build rule for target.
-audio_file_player_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_generate_messages_cpp
-.PHONY : audio_file_player_generate_messages_cpp
-
-# fast build rule for target.
-audio_file_player_generate_messages_cpp/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_cpp.dir/build
-.PHONY : audio_file_player_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult
-
-# Build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult
-
-# fast build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult.dir/build
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult/fast
-
-#=============================================================================
-# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal
-
-# Build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal
-
-# fast build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayGoal.dir/build
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal/fast
-
-#=============================================================================
-# Target rules for targets named audio_file_player_geneus
-
-# Build rule for target.
-audio_file_player_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_geneus
-.PHONY : audio_file_player_geneus
-
-# fast build rule for target.
-audio_file_player_geneus/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_geneus.dir/build.make audio_file_player/CMakeFiles/audio_file_player_geneus.dir/build
-.PHONY : audio_file_player_geneus/fast
-
-#=============================================================================
-# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayResult
-
-# Build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayResult: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayResult
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayResult
-
-# fast build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayResult/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/build
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayResult/fast
-
-#=============================================================================
-# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback
-
-# Build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback
-
-# fast build rule for target.
-_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback.dir/build
-.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback/fast
-
-#=============================================================================
-# Target rules for targets named audio_file_player_generate_messages_nodejs
-
-# Build rule for target.
-audio_file_player_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_generate_messages_nodejs
-.PHONY : audio_file_player_generate_messages_nodejs
-
-# fast build rule for target.
-audio_file_player_generate_messages_nodejs/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build.make audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build
-.PHONY : audio_file_player_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named audio_file_player_gencpp
@@ -623,6 +935,32 @@ audio_file_player_generate_messages_py/fast:
 .PHONY : audio_file_player_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named audio_file_player_gennodejs
+
+# Build rule for target.
+audio_file_player_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_gennodejs
+.PHONY : audio_file_player_gennodejs
+
+# fast build rule for target.
+audio_file_player_gennodejs/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/build.make audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/build
+.PHONY : audio_file_player_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named _audio_file_player_generate_messages_check_deps_AudioFilePlayResult
+
+# Build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _audio_file_player_generate_messages_check_deps_AudioFilePlayResult
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayResult
+
+# fast build rule for target.
+_audio_file_player_generate_messages_check_deps_AudioFilePlayResult/fast:
+	$(MAKE) -f audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/build.make audio_file_player/CMakeFiles/_audio_file_player_generate_messages_check_deps_AudioFilePlayResult.dir/build
+.PHONY : _audio_file_player_generate_messages_check_deps_AudioFilePlayResult/fast
+
+#=============================================================================
 # Target rules for targets named audio_file_player_genpy
 
 # Build rule for target.
@@ -649,147 +987,30 @@ audio_file_player_genlisp/fast:
 .PHONY : audio_file_player_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named audio_file_player_gennodejs
+# Target rules for targets named audio_play
 
 # Build rule for target.
-audio_file_player_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 audio_file_player_gennodejs
-.PHONY : audio_file_player_gennodejs
+audio_play: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_play
+.PHONY : audio_play
 
 # fast build rule for target.
-audio_file_player_gennodejs/fast:
-	$(MAKE) -f audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/build.make audio_file_player/CMakeFiles/audio_file_player_gennodejs.dir/build
-.PHONY : audio_file_player_gennodejs/fast
+audio_play/fast:
+	$(MAKE) -f audio_common/audio_play/CMakeFiles/audio_play.dir/build.make audio_common/audio_play/CMakeFiles/audio_play.dir/build
+.PHONY : audio_play/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_cpp
+# Target rules for targets named data_eyes_confirm_node
 
 # Build rule for target.
-roscpp_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
-.PHONY : roscpp_generate_messages_cpp
+data_eyes_confirm_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 data_eyes_confirm_node
+.PHONY : data_eyes_confirm_node
 
 # fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make robbie_description/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_eus
-
-# Build rule for target.
-roscpp_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/roscpp_generate_messages_eus.dir/build.make robbie_description/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_nodejs
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_nodejs
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
-
-# Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/build.make robbie_description/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_nodejs
-
-# Build rule for target.
-roscpp_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make robbie_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_eus
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make robbie_description/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make robbie_description/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
+data_eyes_confirm_node/fast:
+	$(MAKE) -f data_eyes_confirm/CMakeFiles/data_eyes_confirm_node.dir/build.make data_eyes_confirm/CMakeFiles/data_eyes_confirm_node.dir/build
+.PHONY : data_eyes_confirm_node/fast
 
 #=============================================================================
 # Target rules for targets named robot_arduino_communication_node
@@ -831,6 +1052,305 @@ test_package_node/fast:
 .PHONY : test_package_node/fast
 
 #=============================================================================
+# Target rules for targets named libuvc_camera_nodelet
+
+# Build rule for target.
+libuvc_camera_nodelet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libuvc_camera_nodelet
+.PHONY : libuvc_camera_nodelet
+
+# fast build rule for target.
+libuvc_camera_nodelet/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/libuvc_camera_nodelet.dir/build.make ros_astra_camera/CMakeFiles/libuvc_camera_nodelet.dir/build
+.PHONY : libuvc_camera_nodelet/fast
+
+#=============================================================================
+# Target rules for targets named astra_test_wrapper
+
+# Build rule for target.
+astra_test_wrapper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_test_wrapper
+.PHONY : astra_test_wrapper
+
+# fast build rule for target.
+astra_test_wrapper/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_test_wrapper.dir/build.make ros_astra_camera/CMakeFiles/astra_test_wrapper.dir/build
+.PHONY : astra_test_wrapper/fast
+
+#=============================================================================
+# Target rules for targets named astra_list_devices
+
+# Build rule for target.
+astra_list_devices: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_list_devices
+.PHONY : astra_list_devices
+
+# fast build rule for target.
+astra_list_devices/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_list_devices.dir/build.make ros_astra_camera/CMakeFiles/astra_list_devices.dir/build
+.PHONY : astra_list_devices/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_node
+
+# Build rule for target.
+astra_camera_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_node
+.PHONY : astra_camera_node
+
+# fast build rule for target.
+astra_camera_node/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_node.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_node.dir/build
+.PHONY : astra_camera_node/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_nodelet
+
+# Build rule for target.
+astra_camera_nodelet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_nodelet
+.PHONY : astra_camera_nodelet
+
+# fast build rule for target.
+astra_camera_nodelet/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_nodelet.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_nodelet.dir/build
+.PHONY : astra_camera_nodelet/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_py
+
+# Build rule for target.
+bond_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_py
+.PHONY : bond_generate_messages_py
+
+# fast build rule for target.
+bond_generate_messages_py/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/bond_generate_messages_py.dir/build.make ros_astra_camera/CMakeFiles/bond_generate_messages_py.dir/build
+.PHONY : bond_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_nodejs
+
+# Build rule for target.
+bond_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_nodejs
+.PHONY : bond_generate_messages_nodejs
+
+# fast build rule for target.
+bond_generate_messages_nodejs/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/bond_generate_messages_nodejs.dir/build.make ros_astra_camera/CMakeFiles/bond_generate_messages_nodejs.dir/build
+.PHONY : bond_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_nodejs
+
+# Build rule for target.
+nodelet_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_nodejs
+.PHONY : nodelet_generate_messages_nodejs
+
+# fast build rule for target.
+nodelet_generate_messages_nodejs/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make ros_astra_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+.PHONY : nodelet_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_GetSerial
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_GetSerial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_GetSerial
+.PHONY : _astra_camera_generate_messages_check_deps_GetSerial
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_GetSerial/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetSerial.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetSerial.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_GetSerial/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_lisp
+
+# Build rule for target.
+bond_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_lisp
+.PHONY : bond_generate_messages_lisp
+
+# fast build rule for target.
+bond_generate_messages_lisp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/bond_generate_messages_lisp.dir/build.make ros_astra_camera/CMakeFiles/bond_generate_messages_lisp.dir/build
+.PHONY : bond_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_SetIRExposure
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_SetIRExposure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_SetIRExposure
+.PHONY : _astra_camera_generate_messages_check_deps_SetIRExposure
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_SetIRExposure/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetIRExposure.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetIRExposure.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_SetIRExposure/fast
+
+#=============================================================================
+# Target rules for targets named astra_usb_reset
+
+# Build rule for target.
+astra_usb_reset: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_usb_reset
+.PHONY : astra_usb_reset
+
+# fast build rule for target.
+astra_usb_reset/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_usb_reset.dir/build.make ros_astra_camera/CMakeFiles/astra_usb_reset.dir/build
+.PHONY : astra_usb_reset/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_eus
+
+# Build rule for target.
+bond_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_eus
+.PHONY : bond_generate_messages_eus
+
+# fast build rule for target.
+bond_generate_messages_eus/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/bond_generate_messages_eus.dir/build.make ros_astra_camera/CMakeFiles/bond_generate_messages_eus.dir/build
+.PHONY : bond_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_genpy
+
+# Build rule for target.
+astra_camera_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_genpy
+.PHONY : astra_camera_genpy
+
+# fast build rule for target.
+astra_camera_genpy/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_genpy.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_genpy.dir/build
+.PHONY : astra_camera_genpy/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_py
+
+# Build rule for target.
+nodelet_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_py
+.PHONY : nodelet_generate_messages_py
+
+# fast build rule for target.
+nodelet_generate_messages_py/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/nodelet_generate_messages_py.dir/build.make ros_astra_camera/CMakeFiles/nodelet_generate_messages_py.dir/build
+.PHONY : nodelet_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_lisp
+
+# Build rule for target.
+nodelet_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_lisp
+.PHONY : nodelet_generate_messages_lisp
+
+# fast build rule for target.
+nodelet_generate_messages_lisp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make ros_astra_camera/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+.PHONY : nodelet_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_SetUVCWhiteBalance
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_SetUVCWhiteBalance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_SetUVCWhiteBalance
+.PHONY : _astra_camera_generate_messages_check_deps_SetUVCWhiteBalance
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_SetUVCWhiteBalance/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetUVCWhiteBalance.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetUVCWhiteBalance.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_SetUVCWhiteBalance/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_gencfg
+
+# Build rule for target.
+dynamic_reconfigure_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_gencfg
+.PHONY : dynamic_reconfigure_gencfg
+
+# fast build rule for target.
+dynamic_reconfigure_gencfg/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_py
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_py
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_py/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_GetUVCWhiteBalance
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_GetUVCWhiteBalance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_GetUVCWhiteBalance
+.PHONY : _astra_camera_generate_messages_check_deps_GetUVCWhiteBalance
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_GetUVCWhiteBalance/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetUVCWhiteBalance.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetUVCWhiteBalance.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_GetUVCWhiteBalance/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_cpp
+
+# Build rule for target.
+bond_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_cpp
+.PHONY : bond_generate_messages_cpp
+
+# fast build rule for target.
+bond_generate_messages_cpp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/bond_generate_messages_cpp.dir/build.make ros_astra_camera/CMakeFiles/bond_generate_messages_cpp.dir/build
+.PHONY : bond_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_nodejs
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_nodejs
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+
+#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -840,8 +1360,47 @@ sensor_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_generate_messages
+
+# Build rule for target.
+astra_camera_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_generate_messages
+.PHONY : astra_camera_generate_messages
+
+# fast build rule for target.
+astra_camera_generate_messages/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_generate_messages.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_generate_messages.dir/build
+.PHONY : astra_camera_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_gencfg
+
+# Build rule for target.
+astra_camera_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_gencfg
+.PHONY : astra_camera_gencfg
+
+# fast build rule for target.
+astra_camera_gencfg/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_gencfg.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_gencfg.dir/build
+.PHONY : astra_camera_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_eus
@@ -853,7 +1412,7 @@ sensor_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -866,8 +1425,34 @@ geometry_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_SetLaser
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_SetLaser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_SetLaser
+.PHONY : _astra_camera_generate_messages_check_deps_SetLaser
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_SetLaser/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetLaser.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetLaser.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_SetLaser/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_gennodejs
+
+# Build rule for target.
+astra_camera_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_gennodejs
+.PHONY : astra_camera_gennodejs
+
+# fast build rule for target.
+astra_camera_gennodejs/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_gennodejs.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_gennodejs.dir/build
+.PHONY : astra_camera_gennodejs/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_lisp
@@ -879,47 +1464,34 @@ geometry_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
+# Target rules for targets named nodelet_generate_messages_eus
 
 # Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
+nodelet_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_eus
+.PHONY : nodelet_generate_messages_eus
 
 # fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
+nodelet_generate_messages_eus/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/nodelet_generate_messages_eus.dir/build.make ros_astra_camera/CMakeFiles/nodelet_generate_messages_eus.dir/build
+.PHONY : nodelet_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_nodejs
+# Target rules for targets named _astra_camera_generate_messages_check_deps_GetCameraInfo
 
 # Build rule for target.
-sensor_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
-.PHONY : sensor_msgs_generate_messages_nodejs
+_astra_camera_generate_messages_check_deps_GetCameraInfo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_GetCameraInfo
+.PHONY : _astra_camera_generate_messages_check_deps_GetCameraInfo
 
 # fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_py
-
-# Build rule for target.
-geometry_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
+_astra_camera_generate_messages_check_deps_GetCameraInfo/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetCameraInfo.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetCameraInfo.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_GetCameraInfo/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_py
@@ -931,7 +1503,7 @@ sensor_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make robot_depth_points_play_sound/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	$(MAKE) -f ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -944,8 +1516,21 @@ geometry_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_eus
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_eus
+.PHONY : dynamic_reconfigure_generate_messages_eus
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_eus/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_nodejs
@@ -957,8 +1542,372 @@ geometry_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make robot_depth_points_play_sound/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_cpp
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_cpp
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_SetUVCExposure
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_SetUVCExposure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_SetUVCExposure
+.PHONY : _astra_camera_generate_messages_check_deps_SetUVCExposure
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_SetUVCExposure/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetUVCExposure.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetUVCExposure.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_SetUVCExposure/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_lisp
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_lisp
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_GetDeviceType
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_GetDeviceType: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_GetDeviceType
+.PHONY : _astra_camera_generate_messages_check_deps_GetDeviceType
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_GetDeviceType/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetDeviceType.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetDeviceType.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_GetDeviceType/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_GetIRGain
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_GetIRGain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_GetIRGain
+.PHONY : _astra_camera_generate_messages_check_deps_GetIRGain
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_GetIRGain/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetIRGain.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetIRGain.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_GetIRGain/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_GetUVCExposure
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_GetUVCExposure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_GetUVCExposure
+.PHONY : _astra_camera_generate_messages_check_deps_GetUVCExposure
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_GetUVCExposure/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetUVCExposure.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetUVCExposure.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_GetUVCExposure/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_GetIRExposure
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_GetIRExposure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_GetIRExposure
+.PHONY : _astra_camera_generate_messages_check_deps_GetIRExposure
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_GetIRExposure/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetIRExposure.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetIRExposure.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_GetIRExposure/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_GetUVCGain
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_GetUVCGain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_GetUVCGain
+.PHONY : _astra_camera_generate_messages_check_deps_GetUVCGain
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_GetUVCGain/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetUVCGain.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_GetUVCGain.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_GetUVCGain/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_SetUVCGain
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_SetUVCGain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_SetUVCGain
+.PHONY : _astra_camera_generate_messages_check_deps_SetUVCGain
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_SetUVCGain/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetUVCGain.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetUVCGain.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_SetUVCGain/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_SetIRGain
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_SetIRGain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_SetIRGain
+.PHONY : _astra_camera_generate_messages_check_deps_SetIRGain
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_SetIRGain/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetIRGain.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetIRGain.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_SetIRGain/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_SetIRFlood
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_SetIRFlood: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_SetIRFlood
+.PHONY : _astra_camera_generate_messages_check_deps_SetIRFlood
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_SetIRFlood/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetIRFlood.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetIRFlood.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_SetIRFlood/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_SetLDP
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_SetLDP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_SetLDP
+.PHONY : _astra_camera_generate_messages_check_deps_SetLDP
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_SetLDP/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetLDP.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SetLDP.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_SetLDP/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_ResetIRGain
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_ResetIRGain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_ResetIRGain
+.PHONY : _astra_camera_generate_messages_check_deps_ResetIRGain
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_ResetIRGain/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_ResetIRGain.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_ResetIRGain.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_ResetIRGain/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_ResetIRExposure
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_ResetIRExposure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_ResetIRExposure
+.PHONY : _astra_camera_generate_messages_check_deps_ResetIRExposure
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_ResetIRExposure/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_ResetIRExposure.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_ResetIRExposure.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_ResetIRExposure/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_generate_messages_eus
+
+# Build rule for target.
+astra_camera_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_generate_messages_eus
+.PHONY : astra_camera_generate_messages_eus
+
+# fast build rule for target.
+astra_camera_generate_messages_eus/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_generate_messages_eus.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_generate_messages_eus.dir/build
+.PHONY : astra_camera_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _astra_camera_generate_messages_check_deps_SwitchIRCamera
+
+# Build rule for target.
+_astra_camera_generate_messages_check_deps_SwitchIRCamera: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _astra_camera_generate_messages_check_deps_SwitchIRCamera
+.PHONY : _astra_camera_generate_messages_check_deps_SwitchIRCamera
+
+# fast build rule for target.
+_astra_camera_generate_messages_check_deps_SwitchIRCamera/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SwitchIRCamera.dir/build.make ros_astra_camera/CMakeFiles/_astra_camera_generate_messages_check_deps_SwitchIRCamera.dir/build
+.PHONY : _astra_camera_generate_messages_check_deps_SwitchIRCamera/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_generate_messages_cpp
+
+# Build rule for target.
+astra_camera_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_generate_messages_cpp
+.PHONY : astra_camera_generate_messages_cpp
+
+# fast build rule for target.
+astra_camera_generate_messages_cpp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_generate_messages_cpp.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_generate_messages_cpp.dir/build
+.PHONY : astra_camera_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_gencpp
+
+# Build rule for target.
+astra_camera_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_gencpp
+.PHONY : astra_camera_gencpp
+
+# fast build rule for target.
+astra_camera_gencpp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_gencpp.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_gencpp.dir/build
+.PHONY : astra_camera_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_geneus
+
+# Build rule for target.
+astra_camera_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_geneus
+.PHONY : astra_camera_geneus
+
+# fast build rule for target.
+astra_camera_geneus/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_geneus.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_geneus.dir/build
+.PHONY : astra_camera_geneus/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_genlisp
+
+# Build rule for target.
+astra_camera_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_genlisp
+.PHONY : astra_camera_genlisp
+
+# fast build rule for target.
+astra_camera_genlisp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_genlisp.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_genlisp.dir/build
+.PHONY : astra_camera_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_generate_messages_lisp
+
+# Build rule for target.
+astra_camera_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_generate_messages_lisp
+.PHONY : astra_camera_generate_messages_lisp
+
+# fast build rule for target.
+astra_camera_generate_messages_lisp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_generate_messages_lisp.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_generate_messages_lisp.dir/build
+.PHONY : astra_camera_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_cpp
+
+# Build rule for target.
+nodelet_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_cpp
+.PHONY : nodelet_generate_messages_cpp
+
+# fast build rule for target.
+nodelet_generate_messages_cpp/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make ros_astra_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+.PHONY : nodelet_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_generate_messages_nodejs
+
+# Build rule for target.
+astra_camera_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_generate_messages_nodejs
+.PHONY : astra_camera_generate_messages_nodejs
+
+# fast build rule for target.
+astra_camera_generate_messages_nodejs/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_generate_messages_nodejs.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_generate_messages_nodejs.dir/build
+.PHONY : astra_camera_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named astra_camera_generate_messages_py
+
+# Build rule for target.
+astra_camera_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_camera_generate_messages_py
+.PHONY : astra_camera_generate_messages_py
+
+# fast build rule for target.
+astra_camera_generate_messages_py/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_camera_generate_messages_py.dir/build.make ros_astra_camera/CMakeFiles/astra_camera_generate_messages_py.dir/build
+.PHONY : astra_camera_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named astra_wrapper
+
+# Build rule for target.
+astra_wrapper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_wrapper
+.PHONY : astra_wrapper
+
+# fast build rule for target.
+astra_wrapper/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_wrapper.dir/build.make ros_astra_camera/CMakeFiles/astra_wrapper.dir/build
+.PHONY : astra_wrapper/fast
+
+#=============================================================================
+# Target rules for targets named camera_node
+
+# Build rule for target.
+camera_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 camera_node
+.PHONY : camera_node
+
+# fast build rule for target.
+camera_node/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/camera_node.dir/build.make ros_astra_camera/CMakeFiles/camera_node.dir/build
+.PHONY : camera_node/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make ros_astra_camera/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named astra_driver_lib
+
+# Build rule for target.
+astra_driver_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astra_driver_lib
+.PHONY : astra_driver_lib
+
+# fast build rule for target.
+astra_driver_lib/fast:
+	$(MAKE) -f ros_astra_camera/CMakeFiles/astra_driver_lib.dir/build.make ros_astra_camera/CMakeFiles/astra_driver_lib.dir/build
+.PHONY : astra_driver_lib/fast
 
 #=============================================================================
 # Target rules for targets named robot_depth_points_play_sound_node
@@ -972,6 +1921,266 @@ robot_depth_points_play_sound_node: cmake_check_build_system
 robot_depth_points_play_sound_node/fast:
 	$(MAKE) -f robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build.make robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/build
 .PHONY : robot_depth_points_play_sound_node/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_generate_messages_py
+
+# Build rule for target.
+sound_play_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_generate_messages_py
+.PHONY : sound_play_generate_messages_py
+
+# fast build rule for target.
+sound_play_generate_messages_py/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_generate_messages_py.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_generate_messages_py.dir/build
+.PHONY : sound_play_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_gennodejs
+
+# Build rule for target.
+sound_play_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_gennodejs
+.PHONY : sound_play_gennodejs
+
+# fast build rule for target.
+sound_play_gennodejs/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_gennodejs.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_gennodejs.dir/build
+.PHONY : sound_play_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_generate_messages_nodejs
+
+# Build rule for target.
+sound_play_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_generate_messages_nodejs
+.PHONY : sound_play_generate_messages_nodejs
+
+# fast build rule for target.
+sound_play_generate_messages_nodejs/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_generate_messages_nodejs.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_generate_messages_nodejs.dir/build
+.PHONY : sound_play_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_generate_messages_eus
+
+# Build rule for target.
+sound_play_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_generate_messages_eus
+.PHONY : sound_play_generate_messages_eus
+
+# fast build rule for target.
+sound_play_generate_messages_eus/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_generate_messages_eus.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_generate_messages_eus.dir/build
+.PHONY : sound_play_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _sound_play_generate_messages_check_deps_SoundRequestAction
+
+# Build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestAction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sound_play_generate_messages_check_deps_SoundRequestAction
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestAction
+
+# fast build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestAction/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestAction.dir/build.make audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestAction.dir/build
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestAction/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_genpy
+
+# Build rule for target.
+sound_play_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_genpy
+.PHONY : sound_play_genpy
+
+# fast build rule for target.
+sound_play_genpy/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_genpy.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_genpy.dir/build
+.PHONY : sound_play_genpy/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_genlisp
+
+# Build rule for target.
+sound_play_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_genlisp
+.PHONY : sound_play_genlisp
+
+# fast build rule for target.
+sound_play_genlisp/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_genlisp.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_genlisp.dir/build
+.PHONY : sound_play_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named _sound_play_generate_messages_check_deps_SoundRequestResult
+
+# Build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sound_play_generate_messages_check_deps_SoundRequestResult
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestResult
+
+# fast build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestResult/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestResult.dir/build.make audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestResult.dir/build
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestResult/fast
+
+#=============================================================================
+# Target rules for targets named _sound_play_generate_messages_check_deps_SoundRequestActionResult
+
+# Build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestActionResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sound_play_generate_messages_check_deps_SoundRequestActionResult
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestActionResult
+
+# fast build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestActionResult/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestActionResult.dir/build.make audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestActionResult.dir/build
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestActionResult/fast
+
+#=============================================================================
+# Target rules for targets named _sound_play_generate_messages_check_deps_SoundRequestActionFeedback
+
+# Build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestActionFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sound_play_generate_messages_check_deps_SoundRequestActionFeedback
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestActionFeedback
+
+# fast build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestActionFeedback/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestActionFeedback.dir/build.make audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestActionFeedback.dir/build
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestActionFeedback/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_generate_messages_lisp
+
+# Build rule for target.
+sound_play_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_generate_messages_lisp
+.PHONY : sound_play_generate_messages_lisp
+
+# fast build rule for target.
+sound_play_generate_messages_lisp/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_generate_messages_lisp.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_generate_messages_lisp.dir/build
+.PHONY : sound_play_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _sound_play_generate_messages_check_deps_SoundRequestFeedback
+
+# Build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sound_play_generate_messages_check_deps_SoundRequestFeedback
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestFeedback
+
+# fast build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestFeedback/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestFeedback.dir/build.make audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestFeedback.dir/build
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestFeedback/fast
+
+#=============================================================================
+# Target rules for targets named _sound_play_generate_messages_check_deps_SoundRequestGoal
+
+# Build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestGoal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sound_play_generate_messages_check_deps_SoundRequestGoal
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestGoal
+
+# fast build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestGoal/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestGoal.dir/build.make audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestGoal.dir/build
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestGoal/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_gencpp
+
+# Build rule for target.
+sound_play_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_gencpp
+.PHONY : sound_play_gencpp
+
+# fast build rule for target.
+sound_play_gencpp/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_gencpp.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_gencpp.dir/build
+.PHONY : sound_play_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_generate_messages
+
+# Build rule for target.
+sound_play_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_generate_messages
+.PHONY : sound_play_generate_messages
+
+# fast build rule for target.
+sound_play_generate_messages/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_generate_messages.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_generate_messages.dir/build
+.PHONY : sound_play_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _sound_play_generate_messages_check_deps_SoundRequestActionGoal
+
+# Build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestActionGoal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sound_play_generate_messages_check_deps_SoundRequestActionGoal
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestActionGoal
+
+# fast build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequestActionGoal/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestActionGoal.dir/build.make audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequestActionGoal.dir/build
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequestActionGoal/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_generate_messages_cpp
+
+# Build rule for target.
+sound_play_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_generate_messages_cpp
+.PHONY : sound_play_generate_messages_cpp
+
+# fast build rule for target.
+sound_play_generate_messages_cpp/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_generate_messages_cpp.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_generate_messages_cpp.dir/build
+.PHONY : sound_play_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _sound_play_generate_messages_check_deps_SoundRequest
+
+# Build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sound_play_generate_messages_check_deps_SoundRequest
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequest
+
+# fast build rule for target.
+_sound_play_generate_messages_check_deps_SoundRequest/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequest.dir/build.make audio_common/sound_play/CMakeFiles/_sound_play_generate_messages_check_deps_SoundRequest.dir/build
+.PHONY : _sound_play_generate_messages_check_deps_SoundRequest/fast
+
+#=============================================================================
+# Target rules for targets named sound_play_geneus
+
+# Build rule for target.
+sound_play_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_play_geneus
+.PHONY : sound_play_geneus
+
+# fast build rule for target.
+sound_play_geneus/fast:
+	$(MAKE) -f audio_common/sound_play/CMakeFiles/sound_play_geneus.dir/build.make audio_common/sound_play/CMakeFiles/sound_play_geneus.dir/build
+.PHONY : sound_play_geneus/fast
+
+#=============================================================================
+# Target rules for targets named web_video_server
+
+# Build rule for target.
+web_video_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 web_video_server
+.PHONY : web_video_server
+
+# fast build rule for target.
+web_video_server/fast:
+	$(MAKE) -f web_video_server/CMakeFiles/web_video_server.dir/build.make web_video_server/CMakeFiles/web_video_server.dir/build
+.PHONY : web_video_server/fast
 
 # Help Target
 help:
@@ -996,58 +2205,151 @@ help:
 	@echo "... gtest_main"
 	@echo "... gtest"
 	@echo "... _catkin_empty_exported_target"
-	@echo "... audio_file_player_generate_messages"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayAction"
-	@echo "... std_msgs_generate_messages_eus"
+	@echo "... audio_common_msgs_genpy"
+	@echo "... audio_common_msgs_generate_messages_nodejs"
+	@echo "... audio_common_msgs_genlisp"
+	@echo "... audio_common_msgs_generate_messages_py"
+	@echo "... audio_common_msgs_gennodejs"
 	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... audio_common_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... actionlib_msgs_generate_messages_cpp"
-	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback"
-	@echo "... actionlib_msgs_generate_messages_py"
-	@echo "... audio_file_player_generate_messages_eus"
-	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal"
-	@echo "... actionlib_msgs_generate_messages_lisp"
-	@echo "... actionlib_msgs_generate_messages_eus"
-	@echo "... audio_file_player_generate_messages_cpp"
-	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult"
-	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal"
-	@echo "... audio_file_player_geneus"
-	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayResult"
-	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback"
-	@echo "... audio_file_player_generate_messages_nodejs"
-	@echo "... audio_file_player_gencpp"
-	@echo "... audio_file_player_generate_messages_lisp"
-	@echo "... actionlib_msgs_generate_messages_nodejs"
-	@echo "... audio_file_player_generate_messages_py"
-	@echo "... audio_file_player_genpy"
-	@echo "... audio_file_player_genlisp"
-	@echo "... audio_file_player_gennodejs"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... audio_common_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... _audio_common_msgs_generate_messages_check_deps_AudioData"
+	@echo "... audio_common_msgs_generate_messages"
+	@echo "... audio_common_msgs_geneus"
+	@echo "... _audio_common_msgs_generate_messages_check_deps_AudioDataStamped"
+	@echo "... _audio_common_msgs_generate_messages_check_deps_AudioInfo"
+	@echo "... audio_common_msgs_gencpp"
+	@echo "... audio_common_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... audio_capture"
+	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayFeedback"
+	@echo "... audio_file_player_generate_messages_nodejs"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayGoal"
+	@echo "... audio_file_player_geneus"
+	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayAction"
+	@echo "... audio_file_player_generate_messages"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayActionResult"
+	@echo "... audio_file_player_generate_messages_cpp"
+	@echo "... audio_file_player_generate_messages_eus"
+	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayActionFeedback"
+	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayActionGoal"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... audio_file_player_gencpp"
+	@echo "... audio_file_player_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... audio_file_player_generate_messages_py"
+	@echo "... audio_file_player_gennodejs"
+	@echo "... _audio_file_player_generate_messages_check_deps_AudioFilePlayResult"
+	@echo "... audio_file_player_genpy"
+	@echo "... audio_file_player_genlisp"
+	@echo "... audio_play"
+	@echo "... data_eyes_confirm_node"
 	@echo "... robot_arduino_communication_node"
 	@echo "... robot_start_move_node"
 	@echo "... test_package_node"
+	@echo "... libuvc_camera_nodelet"
+	@echo "... astra_test_wrapper"
+	@echo "... astra_list_devices"
+	@echo "... astra_camera_node"
+	@echo "... astra_camera_nodelet"
+	@echo "... bond_generate_messages_py"
+	@echo "... bond_generate_messages_nodejs"
+	@echo "... nodelet_generate_messages_nodejs"
+	@echo "... _astra_camera_generate_messages_check_deps_GetSerial"
+	@echo "... bond_generate_messages_lisp"
+	@echo "... _astra_camera_generate_messages_check_deps_SetIRExposure"
+	@echo "... astra_usb_reset"
+	@echo "... bond_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... astra_camera_genpy"
+	@echo "... nodelet_generate_messages_py"
+	@echo "... nodelet_generate_messages_lisp"
+	@echo "... _astra_camera_generate_messages_check_deps_SetUVCWhiteBalance"
+	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... _astra_camera_generate_messages_check_deps_GetUVCWhiteBalance"
+	@echo "... bond_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... astra_camera_generate_messages"
+	@echo "... astra_camera_gencfg"
+	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... _astra_camera_generate_messages_check_deps_SetLaser"
+	@echo "... astra_camera_gennodejs"
 	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... nodelet_generate_messages_eus"
+	@echo "... _astra_camera_generate_messages_check_deps_GetCameraInfo"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... _astra_camera_generate_messages_check_deps_SetUVCExposure"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... _astra_camera_generate_messages_check_deps_GetDeviceType"
+	@echo "... _astra_camera_generate_messages_check_deps_GetIRGain"
+	@echo "... _astra_camera_generate_messages_check_deps_GetUVCExposure"
+	@echo "... _astra_camera_generate_messages_check_deps_GetIRExposure"
+	@echo "... _astra_camera_generate_messages_check_deps_GetUVCGain"
+	@echo "... _astra_camera_generate_messages_check_deps_SetUVCGain"
+	@echo "... _astra_camera_generate_messages_check_deps_SetIRGain"
+	@echo "... _astra_camera_generate_messages_check_deps_SetIRFlood"
+	@echo "... _astra_camera_generate_messages_check_deps_SetLDP"
+	@echo "... _astra_camera_generate_messages_check_deps_ResetIRGain"
+	@echo "... _astra_camera_generate_messages_check_deps_ResetIRExposure"
+	@echo "... astra_camera_generate_messages_eus"
+	@echo "... _astra_camera_generate_messages_check_deps_SwitchIRCamera"
+	@echo "... astra_camera_generate_messages_cpp"
+	@echo "... astra_camera_gencpp"
+	@echo "... astra_camera_geneus"
+	@echo "... astra_camera_genlisp"
+	@echo "... astra_camera_generate_messages_lisp"
+	@echo "... nodelet_generate_messages_cpp"
+	@echo "... astra_camera_generate_messages_nodejs"
+	@echo "... astra_camera_generate_messages_py"
+	@echo "... astra_wrapper"
+	@echo "... camera_node"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... astra_driver_lib"
 	@echo "... robot_depth_points_play_sound_node"
+	@echo "... sound_play_generate_messages_py"
+	@echo "... sound_play_gennodejs"
+	@echo "... sound_play_generate_messages_nodejs"
+	@echo "... sound_play_generate_messages_eus"
+	@echo "... _sound_play_generate_messages_check_deps_SoundRequestAction"
+	@echo "... sound_play_genpy"
+	@echo "... sound_play_genlisp"
+	@echo "... _sound_play_generate_messages_check_deps_SoundRequestResult"
+	@echo "... _sound_play_generate_messages_check_deps_SoundRequestActionResult"
+	@echo "... _sound_play_generate_messages_check_deps_SoundRequestActionFeedback"
+	@echo "... sound_play_generate_messages_lisp"
+	@echo "... _sound_play_generate_messages_check_deps_SoundRequestFeedback"
+	@echo "... _sound_play_generate_messages_check_deps_SoundRequestGoal"
+	@echo "... sound_play_gencpp"
+	@echo "... sound_play_generate_messages"
+	@echo "... _sound_play_generate_messages_check_deps_SoundRequestActionGoal"
+	@echo "... sound_play_generate_messages_cpp"
+	@echo "... _sound_play_generate_messages_check_deps_SoundRequest"
+	@echo "... sound_play_geneus"
+	@echo "... web_video_server"
 .PHONY : help
 
 

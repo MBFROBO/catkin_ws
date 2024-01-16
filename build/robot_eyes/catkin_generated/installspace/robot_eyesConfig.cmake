@@ -67,14 +67,14 @@ set(robot_eyes_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(robot_eyes_SOURCE_PREFIX /home/uasu/robot/catkin_ws/src/robot_eyes)
-  set(robot_eyes_DEVEL_PREFIX /home/uasu/robot/catkin_ws/devel)
+  set(robot_eyes_SOURCE_PREFIX /home/robot/catkin_ws/src/robot_eyes)
+  set(robot_eyes_DEVEL_PREFIX /home/robot/catkin_ws/devel)
   set(robot_eyes_INSTALL_PREFIX "")
   set(robot_eyes_PREFIX ${robot_eyes_DEVEL_PREFIX})
 else()
   set(robot_eyes_SOURCE_PREFIX "")
   set(robot_eyes_DEVEL_PREFIX "")
-  set(robot_eyes_INSTALL_PREFIX /home/uasu/robot/catkin_ws/install)
+  set(robot_eyes_INSTALL_PREFIX /home/robot/catkin_ws/install)
   set(robot_eyes_PREFIX ${robot_eyes_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/uasu/robot/catkin_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/robot/catkin_ws/install/lib;/home/robot/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

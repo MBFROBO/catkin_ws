@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/uasu/robot/catkin_ws/src/robot_start_move/src/robot_move.cpp
+/home/robot/catkin_ws/src/robot_start_move/src/robot_move.cpp
 std_msgs/Int8.h
-/home/uasu/robot/catkin_ws/src/robot_start_move/src/std_msgs/Int8.h
+/home/robot/catkin_ws/src/robot_start_move/src/std_msgs/Int8.h
 ros/ros.h
-/home/uasu/robot/catkin_ws/src/robot_start_move/src/ros/ros.h
+/home/robot/catkin_ws/src/robot_start_move/src/ros/ros.h
 signal.h
-/home/uasu/robot/catkin_ws/src/robot_start_move/src/signal.h
+/home/robot/catkin_ws/src/robot_start_move/src/signal.h
 termios.h
-/home/uasu/robot/catkin_ws/src/robot_start_move/src/termios.h
+/home/robot/catkin_ws/src/robot_start_move/src/termios.h
 stdio.h
-/home/uasu/robot/catkin_ws/src/robot_start_move/src/stdio.h
+/home/robot/catkin_ws/src/robot_start_move/src/stdio.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h
@@ -671,7 +671,7 @@ string
 -
 vector
 -
-memory
+map
 -
 ros/types.h
 -

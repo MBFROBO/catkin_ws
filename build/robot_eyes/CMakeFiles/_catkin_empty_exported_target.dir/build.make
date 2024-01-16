@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uasu/robot/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/robot/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uasu/robot/catkin_ws/build
+CMAKE_BINARY_DIR = /home/robot/catkin_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_exp
 .PHONY : robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/uasu/robot/catkin_ws/build/robot_eyes && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/robot/catkin_ws/build/robot_eyes && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uasu/robot/catkin_ws/src /home/uasu/robot/catkin_ws/src/robot_eyes /home/uasu/robot/catkin_ws/build /home/uasu/robot/catkin_ws/build/robot_eyes /home/uasu/robot/catkin_ws/build/robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/catkin_ws/src /home/robot/catkin_ws/src/robot_eyes /home/robot/catkin_ws/build /home/robot/catkin_ws/build/robot_eyes /home/robot/catkin_ws/build/robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_eyes/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

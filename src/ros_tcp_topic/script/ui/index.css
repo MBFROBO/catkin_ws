@@ -1,0 +1,227 @@
+.slidecontainer {
+    position: relative;
+    top: 70px;
+    left: 20px;
+    width: 250px;
+    height: 400px;
+}
+
+.slider {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 0; 
+    height: 0; 
+    background: #d3d3d3; 
+    outline: none;
+    opacity: 0.7; 
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1; 
+}
+
+body {
+    position: relative;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+html {
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.slider::-webkit-slider-thumb {
+    
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 25px; 
+    height: 25px;
+    background: #4CAF50; 
+    cursor: pointer; 
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; 
+    height: 25px; 
+    background: #4CAF50; 
+    cursor: pointer;
+}
+
+.sidepanel {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+  
+.sidepanel a{
+    position:relative;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+  
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.openbtn {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+  
+.openbtn:hover {
+    background-color: #444;
+}
+
+p {
+    position: relative;
+    left: 270px;
+    width: 10px;
+    top: -40px;
+}
+
+img#logo {
+    position: absolute;
+    top: 50px;
+    height: 500px;
+    
+    width: 600px;
+    margin-top: 0%;
+    margin-left: 20%;
+
+}
+img#HAND_STREAM_TRACK {
+    position: relative;
+    width: 420px;
+    height: 340px;
+    left: 75px;
+    top:-275px;
+    border-radius: 5px;
+}
+
+img#STREAM_RIGHT_EYE {
+    position: relative;
+    width: 420px;
+    height: 340px;
+    left: 75px;
+    top:-275px;
+    border-radius: 5px;
+}
+
+/* img#STREAM_RIGHT_COUNT {
+    position: relative;
+    width: 320px;
+    height: 240px;
+    left: -140px;
+    top: -100px;
+    border-radius: 5px;
+} */
+
+img#Astra_HSV {
+    position: relative;
+    width: 420px;
+    height: 340px;
+    left: 85px;
+    top: 100px;
+    border-radius: 5px;
+}
+
+img#Astra_COUNT {
+    position: relative;
+    width: 420px;
+    height: 340px;
+    left: 85px;
+    top: 100px;
+    border-radius: 5px;
+}
+
+video {
+    position: absolute;
+    display: none;
+
+    height: 110%;
+    width: 110%;
+    margin: 0;
+    top: -5%;
+    left: -5%;
+    z-index: 98;
+    color: #FFFFFF00;
+    overflow: hidden;
+}
+
+.buttons_vido_play_container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    top: 200px;
+    left: 250px;
+
+    height: 50px;
+    width: 70vw;
+}
+
+.buttons_vido_play_container button {
+    position: relative;
+    
+    height: 100%;
+    width: 15%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+body {
+    position: relative;
+    overflow:hidden;
+}
+
+.exit_container {
+    position: absolute;
+
+    top: 5vh;
+    left: 95vw;
+
+    height: 45px;
+    width: 45px;
+
+    background-color: #f1f1f100;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.exit_container img {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+
+}

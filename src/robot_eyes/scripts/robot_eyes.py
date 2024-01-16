@@ -1,213 +1,193 @@
 #!/usr/bin/env python3
-
 import cv2 as cv
+import mediapipe as mp
 import rospy
-import threading
 import numpy as np
-from std_msgs.msg import UInt8MultiArray, Int16, String, Int8
-from skimage.util import img_as_ubyte
-from cv_bridge import CvBridge, CvBridgeError
-from sensor_msgs.msg import Image 
-from random import randint
-import time
+import os
+from std_msgs.msg import Int8, Int16MultiArray, Int32MultiArray, Float32MultiArray
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
 
+astra_flag = 0
+astra_data = None
+time_t = 0
+time_t2 = 0
+time_t3 = 0
+human_hand_flag = 0
+hand_storage = {}
+bridge = CvBridge()
 
+cap = cv.VideoCapture(0)
+cap.set(cv.CAP_PROP_FRAME_WIDTH, 320)
+cap.set(cv.CAP_PROP_FRAME_HEIGHT, 240)
 
-class Hand_detection:
+rospy.init_node('Hand_detection', anonymous= True)
+hand = rospy.Publisher('/right_arm_fingers',Int8, queue_size=10)
+log_web_pub = rospy.Publisher('/web_log_right_eye', Int16MultiArray, queue_size=10)
+right_eye_frame = rospy.Publisher('/RIGHT_EYE_FRAME',Image, queue_size=10)
+face = rospy.Publisher('/face_xmin', Float32MultiArray, queue_size=10)
 
-    def __init__(self, debug = False):
-        super().__init__()
-        self.debug = debug
-        self.bridge = CvBridge()
-        self.conturs = 0
-        self.data_hand = Int8()
-        self.data_hand.data = 0
+handle_calibrate_flag = 0
 
-        rospy.init_node('Hand_detection', anonymous= True)
-        self.worker = rospy.Subscriber('/right_shoulder',UInt8MultiArray, queue_size=10)
-        self.hand = rospy.Publisher('/right_arm_fingers',Int8, queue_size=10)
+box_coordinate = [0,0,0,0]
 
-        self.r = rospy.Rate(0.5)
-        self.karnel = np.ones((5, 5), np.float32)/255
-
-        self.cap = cv.VideoCapture(0)
-
-        self.cap.set(cv.CAP_PROP_FRAME_WIDTH, 320)
-        self.cap.set(cv.CAP_PROP_FRAME_HEIGHT, 240)
-
-        # self.timer = rospy.Timer(rospy.Duration(2), callback= self.publish_to_hand, reset=True)
-        """
-            Если DEBUG = 0ff
-        """
-
-        self.h = 93
-        self.s = 40
-        self.v = 255
-        self.arg = 0
-        self._hand = 0
-
-        if self.debug == True:
-            
-            cv.namedWindow('track', cv.WINDOW_NORMAL)
-            cv.createTrackbar('H','track',0,180,self.nothing)
-            cv.createTrackbar('S','track',0,255,self.nothing)
-            cv.createTrackbar('V','track',0,255,self.nothing)
-
-            cv.createTrackbar('HL','track',0,180,self.nothing)
-            cv.createTrackbar('SL','track',0,180,self.nothing)
-            cv.createTrackbar('VL','track',0,180,self.nothing)
-
-            cv.createTrackbar('alpha_brigtness','track', 0, 3, self.nothing)
-            cv.createTrackbar('beta_brightness','track', 0, 50, self.nothing)
-
-        self.flag = 0
-
-    def Video_Capture(self):
-        # rate = rospy.Rate(30)  
-        while True:
-
-            try:
-                ret,frame = self.cap.read()
-
-                if not ret:
-                    break
-                
-                # frame = cv.GaussianBlur(frame, (15, 15), 0)
-                # frame = cv.medianBlur(frame, 7)
-                frame = cv.bilateralFilter(frame, 20 ,50, 50)
-                # frame = cv.filter2D(frame, -1, self.karnel)
-                hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
-                hsv = hsv[100:240, 100:200]
-                if self.debug == True:
-
-                    h = cv.getTrackbarPos('H','track')
-                    s = cv.getTrackbarPos('S','track')
-                    v = cv.getTrackbarPos('V','track')
-
-                    hl = cv.getTrackbarPos('HL','track')
-                    sl = cv.getTrackbarPos('SL','track')
-                    vl = cv.getTrackbarPos('VL','track')
-
-                    self.alpha = cv.getTrackbarPos('alpha_brigtness','track')
-                    self.beta = cv.getTrackbarPos('beta_brigtness','track')
-
-                    lower = np.array([hl,sl,vl])
-                    self.upper = np.array([h,s,v])
-                elif self.debug == False and self.flag == 0:
-
-                    lower = np.array([0,0,180])
-                    self.upper = np.array([self.h,self.s,self.v])
-
-                mask = cv.inRange(hsv,lower,self.upper)
-                opening = cv.morphologyEx(mask, cv.MORPH_OPEN, self.karnel)
-                self.closing = cv.morphologyEx(opening, cv.MORPH_CLOSE, self.karnel)
-
-                conturs, h = cv.findContours(self.closing,cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
-                conturs = sorted(conturs, key = cv.contourArea, reverse=True)
-                count_wh = len(self.closing[self.closing == 255])
-                areas = []
-
-                for i in range(len(conturs)):
-                    area =cv.contourArea(conturs[i])
-                    areas.append(area)
-                    x,y,w,h = cv.boundingRect(conturs[i])
-                    if area > 1000:
-                    # Позиция Hand : w = +-56, h = +- 86
-                            frame = cv.rectangle(frame, (x,y), (x+w, y+h),(0,255,0),2)
-                            frame = cv.rectangle(frame, (x,y), (x+60, y-25),(0,0,0),-1)
-                            cv.putText(frame,f"Is Hand! {w/h}", (x,y),cv.FONT_HERSHEY_SIMPLEX, 0.7,(255,255,255),2)
-                            self.flag = 1
-                            self._hand = 0
-
-                    if sum(map(lambda item: item > 1000, areas)) == 0 and self.flag == 1:
-                       self._hand = 1
- 
-                self.publish_to_hand()
-                # cv.imshow('mask', mask)
-                cv.imshow('close', self.closing)
-                cv.imshow('frame',frame)
-                # cv.imshow('res', res)
-                # cv.imshow('dilation', dilation)
-                cv.waitKey(3)
-                
-                if rospy.is_shutdown(): # Клавиша Esc
-                    self.cap.release()
-                    rospy.loginfo('Shutdown')
-                    break
-                
-                
-            except CvBridgeError as e:
-                rospy.loginfo('CV_BRIDGE_ERROR')
-                
-        cv.destroyAllWindows()
-
+def _astra_camera_callback(data):
+    # global astra_data
+    global astra_flag
     
-    def change_brigtness(self, img):
-        """
-            Изменяем яркость
-        """
-        new_img = np.zeros(img.shape, img.dtype)
-        alpha = 2
-        beta = 100
-
-        for y in range(img.shape[0]):
-            for x in range(img.shape[1]):
-                for c in range(img.shape[2]):
-                    new_img[y,x,c] = np.clip(alpha*img[y,x,c] + beta,0,255)
-                    return new_img
-        
-    def nothing(self, x):
+    if astra_flag == 0:
+        time_t3 = 0
+    else:
         pass
+    
+    if (rospy.get_time() - time_t3) > 1:
+        if data.data[3] == 0:
+            os.environ['astra_data'] = '0' # нет никого / красный
+        elif data.data[3] == 1:
+            os.environ['astra_data'] = '2' # кто то в жёлтом
+        elif data.data[3] == 2:
+            os.environ['astra_data'] = '2' # кто то в синем 
 
-    def publish_to_hand(self, *arg):
-        self.data_hand.data = self._hand
-        if self.hand == 1:
-            self.hand.publish(self.data_hand)
-            rospy.sleep(rospy.Duration(3))
+
+rospy.Subscriber('/astra_eyes', Int32MultiArray, _astra_camera_callback)
+
+def robot_hand_capture():
+    """
+        Захватываем движение руки и головые с помощью нейронной сети
+    """
+    
+    global handle_calibrate_flag
+    global time_t
+    global time_t2
+    global cap
+    global right_eye_frame
+    global bridge
+    global hand
+    global face
+    # global astra_data
+    global astra_flag
+    global log_web_pub
+    global box_coordinate
+    global hand_storage
+    global human_hand_flag
+
+    data_hand = Int8()
+    data_face = Float32MultiArray()
+    log_web_pub_data = Int16MultiArray()
+                          #id cx cy
+    log_web_pub_data.data = [0,0,0]
+                    # flag , xmin
+    data_face.data = [0  ,  0]
+
+    mpHands = mp.solutions.hands
+    hands = mpHands.Hands()
+    mpDraw = mp.solutions.drawing_utils
+
+    mp_face_detection = mp.solutions.face_detection
+    mp_drawing = mp.solutions.drawing_utils
+    face_detection  = mp_face_detection.FaceDetection(model_selection=0, min_detection_confidence=0.5)
+
+    cx_array = []
+    cy_array = []
+
+    while True:
+        success, image = cap.read()
+        imageRGB = cv.cvtColor(image, cv.COLOR_BGR2RGB)
+        results = hands.process(imageRGB)
+        if (int(os.environ['astra_data']) == 0 or int(os.environ['astra_data']) == 1):
+            data_face.data=[0.0,0.0] # Если у нас надо пожать руку - флаг лица 0 
+
+        if results.multi_hand_landmarks and (int(os.environ['astra_data']) == 0 or int(os.environ['astra_data']) == 1):
+            
+            for handLms in results.multi_hand_landmarks:
+                    # working with each hand
+                for id, lm in enumerate(handLms.landmark):
+                    h, w, c = image.shape
+                    cx, cy = int(lm.x * w), int(lm.y * h)
+
+                    cx_array.append(int(cx))
+                    cy_array.append(int(cy)) 
+
+                    if handle_calibrate_flag == 0 and id == 20 and int(os.environ['astra_data']) != None:
+
+                        cx_mean = np.min(np.array(cx_array))
+                        cy_mean = np.min(np.array(cy_array))
+
+                        box_coordinate = [int(cx_mean-25),int(cy_mean-0),int(cx_mean+60),int(cy_mean+80)]
+
+                        hand_storage = {
+                            "id_robot_hand_20":int(id),
+                            "x_robot_hand_20":int(cx),
+                            "y_robot_hand_20":int(cy)
+                        }
+
+                        handle_calibrate_flag = 1
+
+                    human_hand_storage = {
+                        "id_human_hand_20":int(id),
+                        "x_human_hand_20":int(cx),
+                        "y_human_hand_20":int(cy)
+                    }
+
+                    if cx in range(box_coordinate[0], box_coordinate[2]) and cy in range(box_coordinate[1], box_coordinate[3]):
+                        if abs(human_hand_storage["y_human_hand_20"] - hand_storage["y_robot_hand_20"]) > 10:
+                            data_hand.data = 1
+                        else:
+                            data_hand.data = 0
+                    else:
+                        data_hand.data = 0
+
+                        
+                if int(os.environ['astra_data']) == 0 or int(os.environ['astra_data']) == 1:
+                    cv.rectangle(image,(box_coordinate[0],box_coordinate[1]),(box_coordinate[2],box_coordinate[3]),(0,255,0),3)
+                    log_web_pub_data.data = [id, cx, cy]
+                mpDraw.draw_landmarks(image, handLms, mpHands.HAND_CONNECTIONS)
+
         else:
-            self.hand.publish(self.data_hand)
-
-class Move(Hand_detection):
-    def __init__(self):
-        super().__init__(debug = False)
-        self.data_fingers = UInt8MultiArray()
-        self.data_shoulder = UInt8MultiArray()
-
-        self.right_shoulder = rospy.Publisher('/right_shoulder', UInt8MultiArray, queue_size=10)
-        self.right_arm = rospy.Publisher('/right_arm', UInt8MultiArray, queue_size=10)
-
-    def right_hand_fingers_move(self):
+            data_hand.data = 0
         
-        self.data_fingers.data = [0]*6
+        if int(os.environ['astra_data']) == 2:
+            success, image = cap.read()
+            if not success:
+                continue
 
-        self.data_fingers.data[0] = 50
-        self.data_fingers.data[1] = 80
-        self.data_fingers.data[2] = 90
-        self.data_fingers.data[3] = 130
-        self.data_fingers.data[4] = 130
-        self.data_fingers.data[5] = 90
+            image.flags.writeable = False
+            image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
+            results = face_detection.process(image)
 
-        self.right_arm.publish(self.data_fingers)
+            image.flags.writeable = True
+            image = cv.cvtColor(image, cv.COLOR_RGB2BGR)
 
-    def right_hand_shoulder_move(self):
+            if results.detections:
+                for detection in results.detections:
+                    # Если видно лицо
+                    data_face.data=[1.0,detection.location_data.relative_bounding_box.xmin]
+                    mp_drawing.draw_detection(image, detection)
+            else:
+                # Если никого нет близко, но и камера не видит никого
+                data_face.data=[1.0,0.0]
 
-        self.data_shoulder.data = [0]*4
+        _msg_img = bridge.cv2_to_imgmsg(image, "bgr8")
+        right_eye_frame.publish(_msg_img)
 
-        self.data_shoulder.data[0] = 90
-        self.data_shoulder.data[1] = 90
-        self.data_shoulder.data[2] = 93
-        self.data_shoulder.data[3] = 80
+        if int(os.environ['astra_data']) == None:
+            pass
+        elif int(os.environ['astra_data']) == 2:
+            data_hand.data = 0
 
-        self.right_shoulder.publish(self.data_shoulder)
+        if (rospy.get_time() - time_t) > 0.05:
+            time_t = rospy.get_time()
+            hand.publish(data_hand)
+            face.publish(data_face)
 
+        if (rospy.get_time() - time_t2) > 0.1:
+            time_t2 = rospy.get_time()
+            log_web_pub.publish(log_web_pub_data)
+        
+        cv.waitKey(1)
+
+        if rospy.is_shutdown():
+            break
 if __name__ == "__main__":
-    try:
-        # global _hand
-        # _hand = 0
-        HD = Move()
-        HD.Video_Capture()
-        rospy.spin()
-    except rospy.ROSInterruptException:
-        pass
-    except KeyboardInterrupt:
-        print('Shud down')
+    robot_hand_capture()
+    rospy.spin()

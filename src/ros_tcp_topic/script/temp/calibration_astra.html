@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('ui', path = '/index.css')}}">
+</head>
+
+<body>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/eyes_calibrate" onclick="openSliders()">Калибровка зрения</a>
+        <a href="#">Автоматическая калибровка зрения (beta)</a>
+        <a href="/astra_calibrate">Калибровка Astra</a>
+        <a href="/">Галвное Меню</a>
+        <a href="/promo">Промо</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+    <img id="Astra_HSV" src="http://10.42.0.1:8080/stream?topic=/camera/depth/image_rect"/>
+    <img id="Astra_COUNT" src="http://10.42.0.1:8080/stream?topic=/COUNT_PUBLISHER"/>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "300px";
+        }
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        function openSliders() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+    </script>
+</body>
+</html>

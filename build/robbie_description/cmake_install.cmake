@@ -1,8 +1,8 @@
-# Install script for directory: /home/uasu/robot/catkin_ws/src/robbie_description
+# Install script for directory: /home/robot/catkin_ws/src/robbie_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uasu/robot/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robot/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uasu/robot/catkin_ws/build/robbie_description/catkin_generated/installspace/robbie_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robot/catkin_ws/build/robbie_description/catkin_generated/installspace/robbie_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robbie_description/cmake" TYPE FILE FILES
-    "/home/uasu/robot/catkin_ws/build/robbie_description/catkin_generated/installspace/robbie_descriptionConfig.cmake"
-    "/home/uasu/robot/catkin_ws/build/robbie_description/catkin_generated/installspace/robbie_descriptionConfig-version.cmake"
+    "/home/robot/catkin_ws/build/robbie_description/catkin_generated/installspace/robbie_descriptionConfig.cmake"
+    "/home/robot/catkin_ws/build/robbie_description/catkin_generated/installspace/robbie_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robbie_description" TYPE FILE FILES "/home/uasu/robot/catkin_ws/src/robbie_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robbie_description" TYPE FILE FILES "/home/robot/catkin_ws/src/robbie_description/package.xml")
 endif()
 

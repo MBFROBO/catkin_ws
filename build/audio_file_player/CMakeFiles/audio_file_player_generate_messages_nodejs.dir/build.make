@@ -43,88 +43,88 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uasu/robot/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/robot/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uasu/robot/catkin_ws/build
+CMAKE_BINARY_DIR = /home/robot/catkin_ws/build
 
 # Utility rule file for audio_file_player_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/progress.make
 
-audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js
-audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js
-audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js
-audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js
-audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayGoal.js
-audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayResult.js
-audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayFeedback.js
+audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js
+audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js
+audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js
+audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js
+audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayGoal.js
+audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayResult.js
+audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayFeedback.js
 
 
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayAction.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionFeedback.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayResult.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionGoal.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayGoal.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayFeedback.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionResult.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uasu/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from audio_file_player/AudioFilePlayAction.msg"
-	cd /home/uasu/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayAction.msg -Iaudio_file_player:/home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayAction.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionResult.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionGoal.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayResult.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionFeedback.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayFeedback.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayGoal.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from audio_file_player/AudioFilePlayAction.msg"
+	cd /home/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayAction.msg -Iaudio_file_player:/home/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
 
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionGoal.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayGoal.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uasu/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from audio_file_player/AudioFilePlayActionGoal.msg"
-	cd /home/uasu/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionGoal.msg -Iaudio_file_player:/home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionGoal.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayGoal.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from audio_file_player/AudioFilePlayActionGoal.msg"
+	cd /home/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionGoal.msg -Iaudio_file_player:/home/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
 
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionResult.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayResult.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uasu/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from audio_file_player/AudioFilePlayActionResult.msg"
-	cd /home/uasu/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionResult.msg -Iaudio_file_player:/home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionResult.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayResult.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from audio_file_player/AudioFilePlayActionResult.msg"
+	cd /home/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionResult.msg -Iaudio_file_player:/home/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
 
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionFeedback.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayFeedback.msg
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uasu/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from audio_file_player/AudioFilePlayActionFeedback.msg"
-	cd /home/uasu/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionFeedback.msg -Iaudio_file_player:/home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionFeedback.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayFeedback.msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from audio_file_player/AudioFilePlayActionFeedback.msg"
+	cd /home/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayActionFeedback.msg -Iaudio_file_player:/home/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
 
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayGoal.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayGoal.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uasu/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from audio_file_player/AudioFilePlayGoal.msg"
-	cd /home/uasu/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayGoal.msg -Iaudio_file_player:/home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayGoal.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayGoal.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayGoal.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from audio_file_player/AudioFilePlayGoal.msg"
+	cd /home/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayGoal.msg -Iaudio_file_player:/home/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
 
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayResult.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayResult.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uasu/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from audio_file_player/AudioFilePlayResult.msg"
-	cd /home/uasu/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayResult.msg -Iaudio_file_player:/home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayResult.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayResult.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayResult.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from audio_file_player/AudioFilePlayResult.msg"
+	cd /home/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayResult.msg -Iaudio_file_player:/home/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
 
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayFeedback.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayFeedback.js: /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uasu/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from audio_file_player/AudioFilePlayFeedback.msg"
-	cd /home/uasu/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayFeedback.msg -Iaudio_file_player:/home/uasu/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayFeedback.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayFeedback.js: /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from audio_file_player/AudioFilePlayFeedback.msg"
+	cd /home/robot/catkin_ws/build/audio_file_player && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/catkin_ws/devel/share/audio_file_player/msg/AudioFilePlayFeedback.msg -Iaudio_file_player:/home/robot/catkin_ws/devel/share/audio_file_player/msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p audio_file_player -o /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg
 
 audio_file_player_generate_messages_nodejs: audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs
-audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js
-audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js
-audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js
-audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js
-audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayGoal.js
-audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayResult.js
-audio_file_player_generate_messages_nodejs: /home/uasu/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayFeedback.js
+audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayAction.js
+audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionGoal.js
+audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionResult.js
+audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayActionFeedback.js
+audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayGoal.js
+audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayResult.js
+audio_file_player_generate_messages_nodejs: /home/robot/catkin_ws/devel/share/gennodejs/ros/audio_file_player/msg/AudioFilePlayFeedback.js
 audio_file_player_generate_messages_nodejs: audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build.make
 
 .PHONY : audio_file_player_generate_messages_nodejs
@@ -135,10 +135,10 @@ audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/buil
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/build
 
 audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/clean:
-	cd /home/uasu/robot/catkin_ws/build/audio_file_player && $(CMAKE_COMMAND) -P CMakeFiles/audio_file_player_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/robot/catkin_ws/build/audio_file_player && $(CMAKE_COMMAND) -P CMakeFiles/audio_file_player_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/clean
 
 audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/depend:
-	cd /home/uasu/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uasu/robot/catkin_ws/src /home/uasu/robot/catkin_ws/src/audio_file_player /home/uasu/robot/catkin_ws/build /home/uasu/robot/catkin_ws/build/audio_file_player /home/uasu/robot/catkin_ws/build/audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/catkin_ws/src /home/robot/catkin_ws/src/audio_file_player /home/robot/catkin_ws/build /home/robot/catkin_ws/build/audio_file_player /home/robot/catkin_ws/build/audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : audio_file_player/CMakeFiles/audio_file_player_generate_messages_nodejs.dir/depend
 

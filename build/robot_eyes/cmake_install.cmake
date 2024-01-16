@@ -1,8 +1,8 @@
-# Install script for directory: /home/uasu/robot/catkin_ws/src/robot_eyes
+# Install script for directory: /home/robot/catkin_ws/src/robot_eyes
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uasu/robot/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robot/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uasu/robot/catkin_ws/build/robot_eyes/catkin_generated/installspace/robot_eyes.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robot/catkin_ws/build/robot_eyes/catkin_generated/installspace/robot_eyes.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_eyes/cmake" TYPE FILE FILES
-    "/home/uasu/robot/catkin_ws/build/robot_eyes/catkin_generated/installspace/robot_eyesConfig.cmake"
-    "/home/uasu/robot/catkin_ws/build/robot_eyes/catkin_generated/installspace/robot_eyesConfig-version.cmake"
+    "/home/robot/catkin_ws/build/robot_eyes/catkin_generated/installspace/robot_eyesConfig.cmake"
+    "/home/robot/catkin_ws/build/robot_eyes/catkin_generated/installspace/robot_eyesConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_eyes" TYPE FILE FILES "/home/uasu/robot/catkin_ws/src/robot_eyes/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_eyes" TYPE FILE FILES "/home/robot/catkin_ws/src/robot_eyes/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_eyes" TYPE PROGRAM FILES "/home/uasu/robot/catkin_ws/build/robot_eyes/catkin_generated/installspace/robot_eyes.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_eyes" TYPE PROGRAM FILES "/home/robot/catkin_ws/build/robot_eyes/catkin_generated/installspace/robot_eyes.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_eyes" TYPE PROGRAM FILES "/home/robot/catkin_ws/build/robot_eyes/catkin_generated/installspace/hand_tracker.py")
 endif()
 
