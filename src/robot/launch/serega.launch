@@ -1,28 +1,24 @@
 <launch>
-    <node name="audio_file_player" pkg="audio_file_player" type="play_file_server.py" output="screen">
-        <!-- Parameters to change the player to use other commands, flags and the rate (Hz) at which
-        the feedback is published, this is equivalent to the default configuration -->
+    <!-- <node name="audio_file_player" pkg="audio_file_player" type="play_file_server.py" output="screen">
         <param name="command" value="play"/>
         <param name="flags" value=""/>
         <param name="feedback_rate" value="10"/>
-    </node>
+    </node> -->
     <!-- <node name="serial_node_nano" pkg="rosserial_arduino" type="serial_node.py">
             <param name="port" type="string" value="/dev/ttyUSB1"/>
             <param name="baud" type="int" value="9600" />
     </node> -->
     <!-- <node name="holl_sensors_heandler" pkg = "holl_heandler" type = "hollHeandler.py" >
     </node> -->
-    <node name="data_eyes_confirm" pkg = "data_eyes_confirm" type = "data_confirm.py" >
-    </node>
+    <node name="data_eyes_confirm" pkg = "data_eyes_confirm" type = "data_confirm.py" ></node>
+    <node name="sound_processing" pkg = "sound_processing" type = "sound_processing.py"></node>
+    <node name="text_processing" pkg = "sound_processing" type = "text_processing.py"></node>
     <node name="robot_arduino_communication" pkg="robot_arduino_communication" type="communication.py" />
     <node name="robot_eyes" pkg = "robot_eyes" type = "robot_eyes.py" />
     <node name= "robot_depth_points_play_sound" pkg = "robot_depth_points_play_sound" type = "human_tracking.py" />
-    <!-- <node name= "robot_depth_points_play_sound_detecter" pkg = "robot_depth_points_play_sound" type = "human_detect.py" /> -->
-
     <node name ="ros_tcp_topic" pkg="ros_tcp_topic" type="tcp_server.py" />
+    <node name ="signal_handler" pkg="signal_handler" type="signal_handler.py" />
     <node name = "hand_tracker" pkg = "robot_eyes" type = "hand_tracker.py"/>
-    <node name = "sound_processing" pkg = "sound_processing" type="sound_processing.py"/>
-    <!-- <node name = "audio_common" pkg = "audio_capture" type = "audio_capture"/> -->
     <node name ="web_video_server" pkg = "web_video_server" type = "web_video_server"/>
 </launch>
 

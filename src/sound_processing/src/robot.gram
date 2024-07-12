@@ -1,0 +1,4 @@
+#JSGF V1.0;
+
+grammar robot;
+public <query> = кофе | чай | молоко;

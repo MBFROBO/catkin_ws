@@ -128,7 +128,7 @@ robot_depth_points_play_sound_node_EXTERNAL_OBJECTS =
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.2.0
-/home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /opt/ros/noetic/lib/libimage_transport.so
+/home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /home/robot/catkin_ws/devel/lib/libimage_transport.so
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /opt/ros/noetic/lib/libmessage_filters.so
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /opt/ros/noetic/lib/libclass_loader.so
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /usr/lib/x86_64-linux-gnu/libPocoFoundation.so
@@ -155,6 +155,7 @@ robot_depth_points_play_sound_node_EXTERNAL_OBJECTS =
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
 /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node: robot_depth_points_play_sound/CMakeFiles/robot_depth_points_play_sound_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robot/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/robot/catkin_ws/devel/lib/robot_depth_points_play_sound/robot_depth_points_play_sound_node"
 	cd /home/robot/catkin_ws/build/robot_depth_points_play_sound && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot_depth_points_play_sound_node.dir/link.txt --verbose=$(VERBOSE)

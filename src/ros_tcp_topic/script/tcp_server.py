@@ -1,7 +1,11 @@
 #! /usr/bin/python
 
-import rospy, os
-import uvicorn
+import rospy, os, json
+import uvicorn, socket
+import multiprocessing as mp
+import pathlib, dotenv
+
+
 from pathlib import Path
 from std_msgs.msg import String, Int16MultiArray, Int8MultiArray
 from fastapi import (FastAPI, Request, WebSocket)
@@ -9,7 +13,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.websockets import WebSocketDisconnect
 from typing import List
-import sqlite3
+
+json_path = (Path(__file__).parent.parent.parent.parent.absolute() / 'sound.json')
 rospy.init_node('tcp_web_server')
 
 test_pub = rospy.Publisher('web_server', String, queue_size=10)
@@ -43,6 +48,17 @@ async def root(request: Request):
 async def promo(request:Request):
     return templates.TemplateResponse('promo.html', context={'request':request})
 
+@app.get("/sound")
+async def sound(request:Request):
+    """
+        Берём звук из ноды sound_processing
+    """
+    with open(json_path) as j_file:
+        content = j_file.read()
+        sound_data = json.loads(content)
+    return {'sound':sound_data}
+
+    
 
 class ConnectionManager:
     def __init__(self):

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('ui', path = '/index.css')}}">
+
 </head>
 
 <body>
@@ -50,58 +51,92 @@
             document.getElementById("mySidepanel").style.width = "0";
         }
 
-        for (let i = 0; i < 6; i++) {
-            document.getElementById("slider_" + i).style.width = "250px";
-            document.getElementById("slider_" + i).style.height = "25px";
-            document.getElementById("slider_" + i).style.top = "25px";
-        }
+        // for (let i = 0; i < 6; i++) {
+        //     document.getElementById("slider_" + i).style.width = "250px";
+        //     document.getElementById("slider_" + i).style.height = "25px";
+        //     document.getElementById("slider_" + i).style.top = "25px";
+        // }
 
 
     </script>
+    <div class="chat"></div>
     <img id="HAND_STREAM_TRACK" src="http://10.42.0.1:8080/stream?topic=/HAND_STREAM_TRACK" />
     <img id="STREAM_RIGHT_EYE" src="http://10.42.0.1:8080/stream?topic=/RIGHT_EYE_FRAME" />
     <!-- <img id="STREAM_RIGHT_COUNT" src="http://10.42.0.1:8080/stream?topic=/RIGHT_EYE_COUNT" /> -->
     <script>
 
-        var ws = new WebSocket("ws://" + window.location.host + '/eyes_calibrate');
+        // var ws = new WebSocket("ws://" + window.location.host + '/eyes_calibrate');
 
-        var input0 = document.querySelector("#slider_0");
-        var input1 = document.querySelector("#slider_1");
-        var input2 = document.querySelector("#slider_2");
-        var input3 = document.querySelector("#slider_3");
-        var input4 = document.querySelector("#slider_4");
-        var input5 = document.querySelector("#slider_5");
+        // var input0 = document.querySelector("#slider_0");
+        // var input1 = document.querySelector("#slider_1");
+        // var input2 = document.querySelector("#slider_2");
+        // var input3 = document.querySelector("#slider_3");
+        // var input4 = document.querySelector("#slider_4");
+        // var input5 = document.querySelector("#slider_5");
 
-        ws.onopen = function () {
-            ws.send(JSON.stringify({
-                'connection': 'open'
-            }));
-        }
-
-        ws.onmessage = function (event) {
-            console.log(event.data);
-
-            setInterval(() => {
-                ws.send(JSON.stringify({
-                    'message':'ok'
-                }))
-            }, 1000)
-        }
-
-        // function onClickButtonRange() {
-
+        // ws.onopen = function () {
         //     ws.send(JSON.stringify({
-        //         'slider0': input0.value,
-        //         'slider1': input1.value,
-        //         'slider2': input2.value,
-        //         'slider3': input3.value,
-        //         'slider4': input4.value,
-        //         'slider5': input5.value,
+        //         'connection': 'open'
         //     }));
         // }
-        
-        ws.onclose = function () { }
 
+        // ws.onmessage = function (event) {
+        //     console.log(event.data);
+
+        //     setInterval(() => {
+        //         ws.send(JSON.stringify({
+        //             'message':'ok'
+        //         }))
+        //     }, 1000)
+        // }
+
+        // // function onClickButtonRange() {
+
+        // //     ws.send(JSON.stringify({
+        // //         'slider0': input0.value,
+        // //         'slider1': input1.value,
+        // //         'slider2': input2.value,
+        // //         'slider3': input3.value,
+        // //         'slider4': input4.value,
+        // //         'slider5': input5.value,
+        // //     }));
+        // // }
+        
+        // ws.onclose = function () { }
+        var chat_data;
+        var prev_chat_data = '';
+        const chat = document.querySelector('.chat');
+        let xhr = new XMLHttpRequest();
+
+        function get_sound() {
+            xhr.open("GET", 'http://10.42.0.1:8282/sound',);
+            xhr.send();
+            xhr.onload = () => {
+                if (xhr.status == 200) {
+
+                    chat_data = JSON.parse(xhr.response).sound;
+                    if (chat_data.sound != prev_chat_data) {
+                        let msg = document.createElement('span');
+
+                        let img = document.createElement('img');
+                        img.src = "http://10.42.0.1:8282/home/robot/catkin_ws/src/ros_tcp_topic/script/ui/img/arrow.svg";
+
+                        let p = document.createElement('p');
+                        p.innerHTML = chat_data.sound;
+
+                        msg.appendChild(img);
+                        msg.appendChild(p);
+                        chat.prepend(msg);
+                        prev_chat_data = chat_data.sound;
+                    }
+                } else {
+                    
+                }
+            }
+            setTimeout(() => get_sound(), 1000)
+        }
+        get_sound();
+        
     </script>
 </body>
 

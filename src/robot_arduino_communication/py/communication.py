@@ -40,7 +40,7 @@ def Right_arm_callback(data, right_arm = right_arm):
         data_right_arm.data[2] = 10    # безымянный
         data_right_arm.data[3] = 10   # мезинец
         data_right_arm.data[4] = 10   # большой
-        data_right_arm.data[5] = 140    # запястьем
+        data_right_arm.data[5] = 180    # запястьем
         
     elif data == Int8(0):
         
@@ -49,7 +49,7 @@ def Right_arm_callback(data, right_arm = right_arm):
         data_right_arm.data[2] = 170
         data_right_arm.data[3] = 170
         data_right_arm.data[4] = 170
-        data_right_arm.data[5] = 70
+        data_right_arm.data[5] = 0
 
     else:
 
@@ -58,7 +58,7 @@ def Right_arm_callback(data, right_arm = right_arm):
         data_right_arm.data[2] = 180
         data_right_arm.data[3] = 180
         data_right_arm.data[4] = 180
-        data_right_arm.data[5] = 140
+        data_right_arm.data[5] = 180
 
     if (rospy.get_time() - log_timer_right_arm) > 0.1:
         log_timer_right_arm = rospy.get_time()
@@ -113,7 +113,14 @@ def Right_shoulder(data = None, right_shoulder = right_shoulder):
             data_right_shoulder.data[2] = 90
             data_right_shoulder.data[3] = 75
 
-        # if data.data[3] == 2:
+        else:
+            data_right_shoulder.data = [0]*4
+
+            data_right_shoulder.data[0] = 75
+            data_right_shoulder.data[1] = 90
+            data_right_shoulder.data[2] = 90
+            data_right_shoulder.data[3] = 93
+
         #     data_right_shoulder.data = [0]*4
 
         #     data_right_shoulder.data[0] = 60
@@ -142,21 +149,21 @@ def Left_shoulder(data = None, left_shoulder = left_shoulder):
     if data is not None:
         if data.data == Int8(1):
             data_left_shoulder.data = [0]*4
-            data_left_shoulder.data[0] = 110
-            data_left_shoulder.data[1] = 60
-            data_left_shoulder.data[2] = 60
+            data_left_shoulder.data[0] = 90
+            data_left_shoulder.data[1] = 80
+            data_left_shoulder.data[2] = 90
             data_left_shoulder.data[3] = 93
         if data.data == Int8(0):
             data_left_shoulder.data = [0]*4
-            data_left_shoulder.data[0] = 110
-            data_left_shoulder.data[1] = 60
-            data_left_shoulder.data[2] = 60
+            data_left_shoulder.data[0] = 90
+            data_left_shoulder.data[1] = 80
+            data_left_shoulder.data[2] = 90
             data_left_shoulder.data[3] = 93
         else:
             data_left_shoulder.data = [0]*4
-            data_left_shoulder.data[0] = 110
-            data_left_shoulder.data[1] = 60
-            data_left_shoulder.data[2] = 60
+            data_left_shoulder.data[0] = 90
+            data_left_shoulder.data[1] = 80
+            data_left_shoulder.data[2] = 90
             data_left_shoulder.data[3] = 93
 
     if (rospy.get_time() - log_timer_left_shoulder) > 3:
@@ -168,12 +175,12 @@ def Neck(data = None, neck = neck):
     global log_timer_neck
 
     if data is not None:
-        if data.data[0] == 0: 
+        if data.data[3] == 0: 
             data_Neck.data = [0]*3
             data_Neck.data[0] =180# правая
             data_Neck.data[1] = 0 # левая
             data_Neck.data[2] = 120 # центральная
-        if data.data[0] == 1:
+        if data.data[3] == 2:
             data_Neck.data = [0]*3
             data_Neck.data[0] = 180 # правая
             data_Neck.data[1] = 0 # левая
@@ -205,52 +212,6 @@ def Head(data = None, head = head):
 
     if data is not None:
 
-        
-            
-            # Head_wrist.append(int((data.data[1]*255 - 225)*0.4))
-            # if len(Head_wrist) == 10:
-            #     mean_wrist = int(np.mean(np.array(Head_wrist)))
-
-            #     if mean_wrist > 255:
-            #         mean_wrist = 255
-            #     elif mean_wrist < 0:
-            #         mean_wrist = 0
-
-            #     data_Head.data[3] = mean_wrist
-            #     del Head_wrist[0]
-            # else:
-            #     data_Head.data[3] = abs(int((data.data[1] - 225)*0.45))
-                
-            # center_position = np.arange(0.0, 0.4)
-            # normalization_koef = 1 - data.data[1]
-            # rospy.logwarn('normalization koef %s', normalization_koef)
-            # rospy.logwarn('data.data[1] %s', data.data[1])
-            # if normalization_koef in center_position:
-            #     pass
-            # else:
-            #     if head_wrist_flag == 0:
-            #         if 0.3 - normalization_koef > 0 and (normalization_koef) not in center_position:
-            #             mean_wrist = BASE_STATEMENT_HEAD + int(data.data[1]*70)
-            #         elif 0.3 - normalization_koef < 0 and (normalization_koef) not in center_position:
-            #             mean_wrist = BASE_STATEMENT_HEAD - int(data.data[1]*70)
-            #         else:
-            #             pass
-            #     if head_wrist_flag == 1:
-            #         if 0.3 - normalization_koef > 0 and (normalization_koef) not in center_position:
-            #             mean_wrist = mean_wrist + int(data.data[1]*70)
-            #         elif 0.3 - normalization_koef < 0 and (normalization_koef) not in center_position:
-            #             mean_wrist = mean_wrist - int(data.data[1]*70)
-            #         else:
-            #             pass
-            
-
-            
-            
-            # if mean_wrist > 255:
-            #     mean_wrist = 255
-            # elif mean_wrist < 0:
-            #     mean_wrist = 0
-
         if (rospy.get_time() - log_timer_head) > 0.05:
             if (data.data[0] == 0.0) and data.data[1] == 0.0:
                 data_data_1_old = 80
@@ -258,7 +219,8 @@ def Head(data = None, head = head):
                 data_Head.data[0] = 0 # рот
                 data_Head.data[1] = 70 # поворот глаз
                 data_Head.data[2] = 180 # наклон глаз
-                data_Head.data[3] = 60 # поворот головы
+                data_Head.data[3] = 110 # поворот головы
+
             elif data.data[0] == 1.0 and data.data[1] == 0.0:
                 data_data_1_old = 80
                 data_Head.data = [0]*4
@@ -268,21 +230,20 @@ def Head(data = None, head = head):
                 data_Head.data[3] = 80 # поворот головы
 
             elif data.data[0] == 1.0:
+                
                 data_Head.data = [0]*4
                 global Head_wrist                
-
                 Kp = 11
                 error = (0.5 - (1 - data.data[1]))
                 P = error * Kp
-                # r_b = map_(P, -0.5, 0.5, -10, 10)
-                # rospy.logwarn("P = %s data.data[1] = %s", P, data.data[1])
-                # if r_b < 0:
-                #     r_b = 0
-                # if r_b > 115:
-                #     r_b = 115
 
                 data_data_1_old = data_data_1_old + int(P)
                 mean_wrist = int(data_data_1_old)
+                
+                if mean_wrist > 255:
+                    mean_wrist = 255
+                if mean_wrist < 0:
+                    mean_wrist = 0
 
                 data_Head.data[0] = 0 # рот
                 data_Head.data[1] = 100 # поворот глаз
@@ -290,7 +251,7 @@ def Head(data = None, head = head):
                 data_Head.data[3] = abs(int(mean_wrist))
 
             log_timer_head = rospy.get_time()
-            rospy.logwarn('Head turn %s', data_Head)
+            # rospy.logwarn('Head turn %s', data_Head)
             head.publish(data_Head)
 
 
@@ -301,7 +262,7 @@ while not rospy.is_shutdown():
     rospy.Subscriber('/face_xmin', Float32MultiArray, Head)
     rospy.Subscriber('/astra_eyes', Int32MultiArray, Neck)
     rospy.Subscriber('/astra_eyes', Int32MultiArray, Right_shoulder)
-    rospy.Subscriber('/data_eyes_confirm', Int8, Left_arm)
+    rospy.Subscriber('/data_eyes_confirm', Int8, Right_arm_callback)
     rate.sleep()
 
 rospy.spin()

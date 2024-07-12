@@ -94,6 +94,7 @@ def robot_hand_capture():
         success, image = cap.read()
         imageRGB = cv.cvtColor(image, cv.COLOR_BGR2RGB)
         results = hands.process(imageRGB)
+        rospy.logwarn(os.environ['astra_data'])
         if (int(os.environ['astra_data']) == 0 or int(os.environ['astra_data']) == 1):
             data_face.data=[0.0,0.0] # Если у нас надо пожать руку - флаг лица 0 
 
@@ -160,11 +161,9 @@ def robot_hand_capture():
 
             if results.detections:
                 for detection in results.detections:
-                    # Если видно лицо
                     data_face.data=[1.0,detection.location_data.relative_bounding_box.xmin]
                     mp_drawing.draw_detection(image, detection)
             else:
-                # Если никого нет близко, но и камера не видит никого
                 data_face.data=[1.0,0.0]
 
         _msg_img = bridge.cv2_to_imgmsg(image, "bgr8")

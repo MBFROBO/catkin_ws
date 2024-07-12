@@ -1,15 +1,30 @@
-# import speech_recognition
 
-# sr = speech_recognition.Recognizer()
-# sr.pause_threshold = 0.8
-# print(speech_recognition.Microphone.list_working_microphones())
+import os
+from pocketsphinx import LiveSpeech, get_model_path
+import wave, librosa, pyaudio
 
+model_path = get_model_path()
 
+speech = LiveSpeech(
+    verbose=False,
+    sampling_rate=16000,
+    buffer_size=1024,
+    no_search=True,
+    full_utt=False,
+    hmm=os.path.join(model_path, '/home/robot/Загрузки/zero_ru_cont_8k_v3/zero_ru.cd_cont_4000'),
+    lm=False,
+    jsgf = os.path.join(model_path, '/home/robot/Загрузки/zero_ru_cont_8k_v3/grammar.jsgf'),
+    dic=os.path.join(model_path, '/home/robot/Загрузки/zero_ru_cont_8k_v3/transcr.dic')
+)
 
-# with speech_recognition.Microphone() as mic:
-#     sr.adjust_for_ambient_noise
-#     audio = sr.listen(mic)
-#     query = sr.recognize_google(audio_data=audio, language='ru-RU').lower()
-# print(query)
+print("Say something!")
 
+for phrase in speech:
 
+    _split_phrase = str(phrase).split(' ')
+    if _split_phrase[0] == 'ERROR:':
+        pass
+    elif _split_phrase[0] == 'WARN:':
+        pass
+    else:
+        pass
